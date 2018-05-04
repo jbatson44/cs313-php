@@ -3,6 +3,6 @@
 		<title>Jake Batson's Homepage</title>
 	</head>
 	<body>
-		Hello World.
+		<p>Hello World.</p>
 	</body>
 </html>
