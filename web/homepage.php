@@ -80,9 +80,9 @@
 					</div><br><br>
 				</div>		
 			</div>
-		</div>
 <?php
-echo "Today's date: " . date("Y/m/d") . "<br>";
+echo "Today's date: " . date("m/d/Y") . "<br>";
 ?>
+		</div>
 	</body>
 </html>
