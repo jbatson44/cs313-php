@@ -1,0 +1,68 @@
+body {
+	background-image: url(https://i.pinimg.com/736x/08/ef/df/08efdf45c707bd56c244f453c2756756--seamless-textures-mountain.jpg);
+}
+a {
+	color: black;
+}
+img {
+	border: solid black 10px;
+}
+#intro {
+	text-align: left;
+}
+.imgs {
+	float: left;
+}
+img:hover {
+	opacity: 0.6;
+}
+.descriptions {
+	float: right;
+	text-align: center;
+	padding-left: 0px;
+}
+#manDescription {
+	visibility: hidden;
+}
+#skeletonDescription {
+	visibility: hidden;
+}
+#tiefighterDescription {
+	visibility: hidden;
+}
+.close {
+	clear: both;
+}
+#main {
+	margin-left: 300px;
+	margin-right: 300px;
+	background-color: gray;
+	border-top: solid black 10px;
+	border-left: solid black 10px;
+	border-right: solid black 10px;
+	border-bottom: solid black 10px;
+	
+}
+#header {
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: center;
+}
+#nav {
+	
+}
+table {
+	border-top: solid black 3px;
+	border-bottom: solid black 3px;
+	width: 100%;
+}
+th {
+	padding-left: 100px;
+	padding-right: 100px;
+	border-left:solid black 1px;
+	border-right:solid black 1px;
+}
+#content {
+	padding-left: 50px;
+	padding-right: 50px;
+}
