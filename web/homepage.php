@@ -81,7 +81,9 @@
 				</div>		
 			</div>
 <?php
+date_default_timezone_set("America/Boise");
 echo "Today's date: " . date("m/d/Y") . "<br>";
+echo "The time: " . date("h:i:sa");
 ?>
 		</div>
 	</body>
