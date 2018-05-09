@@ -14,7 +14,7 @@ $major= $_POST["major"];
 $comments= $_POST["comments"];
 $places=$_POST["country"];
 
-echo("Your name is $name <br> email is <a href= \"mailto:$email\">$email</a> <br> your major is $major <br><br> $comments <br><br> you have visited:<br>");
+echo("Your name: $name <br> Your email: <a href= \"mailto:$email\">$email</a> <br> Your major: $major <br><br> Additional comments: $comments <br><br> You have visited:<br>");
 
 
 if(!empty($_POST['country'])){
