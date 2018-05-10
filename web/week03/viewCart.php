@@ -19,7 +19,8 @@ $price = $_POST["price1"];
 for ($i = 0; $i < count($items); $i++) {
 	$newPrice = floatval($price[$i]);
 	$newAmount = intval($amounts[$i]);
-	echo "<tr><td>" . $items[$i] . "</td><td>" . $newAmount . "</td><td>" . $newPrice * $newAmount . "</td></tr>";
+	$total = $newPrice * newAmount;
+	echo "<tr><td>" . $items[$i] . "</td><td>" . $newAmount . "</td><td>" . $total . "</td></tr>";
 }
 ?>
 		</table>
