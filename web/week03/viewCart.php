@@ -10,10 +10,13 @@
 				<th>Price</th>
 			</tr>
 <?php
-if(!empty($_POST['cart'])){
-foreach($_POST['cart'] as $selected){
-echo "<tr><td>" . $selected . "</td></tr>";}}
-
+//if(!empty($_POST['cart'])){
+//foreach($_POST['cart'] as $selected){
+//echo "<tr><td>" . $selected . "</td><td>" .  . "</tr>";}}
+$items = $_POST["item"];
+for ($i = 0; $i < count($items); $i++) {
+	echo "<tr><td>" . $items[$i] . "</td></tr>";
+}
 ?>
 		</table>
 	</body>
