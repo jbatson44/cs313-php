@@ -14,8 +14,9 @@
 //foreach($_POST['cart'] as $selected){
 //echo "<tr><td>" . $selected . "</td><td>" .  . "</tr>";}}
 $items = $_POST["item"];
+$amounts = $_POST["number"];
 for ($i = 0; $i < count($items); $i++) {
-	echo "<tr><td>" . $items[$i] . "</td></tr>";
+	echo "<tr><td>" . $items[$i] . "</td><td>" . $amounts[$i] . "</td></tr>";
 }
 ?>
 		</table>
