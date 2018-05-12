@@ -50,6 +50,9 @@ session_start();
 				<td><input type="submit" name="submit" value="add to cart"></td>
 				</form>
 <?php
+if ($_SESSION['thing1'] < 1) {
+	unset($_SESSION['thing1']);
+}
 if (isset($_POST['submit'])) {
 	if (!isset($_SESSION['thing1'])) {
 		$_SESSION['thing1'] = $_POST['thing1'];
