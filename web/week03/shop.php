@@ -65,23 +65,15 @@ if ($_SESSION['thing4'] < 1) {
 if (isset($_POST['submit'])) {
 	if (!isset($_SESSION['thing1'])) {
 		$_SESSION['thing1'] = $_POST['thing1'];
-		if ($_SESSION['thing1'] < 1)
-			unset($_SESSION['thing1']);
 	}
 	if (!isset($_SESSION['thing1'])) {
 		$_SESSION['thing2'] = $_POST['thing2'];
-		if ($_SESSION['thing2'] < 1)
-			unset($_SESSION['thing2']);
 	}
 	if (!isset($_SESSION['thing1'])) {
 		$_SESSION['thing3'] = $_POST['thing3'];
-		if ($_SESSION['thing3'] < 1)
-			unset($_SESSION['thing3']);
 	}
 	if (!isset($_SESSION['thing1'])) {
 		$_SESSION['thing4'] = $_POST['thing4'];
-		if ($_SESSION['thing4'] < 1)
-			unset($_SESSION['thing4']);
 	}
 	//$_SESSION['thing2'] = $_POST['thing2'];
 	//$_SESSION['thing3'] = $_POST['thing3'];
