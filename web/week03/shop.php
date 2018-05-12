@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<h1>Items</h2>
-		<form method="post" action="<?php echo'itworked' ?>">
+		<form method="post" action="<?php echo $_POST['price1'] ?>">
 			<table>
 				<tr>
 					<th>Item</th>
