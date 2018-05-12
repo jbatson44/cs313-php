@@ -32,6 +32,7 @@ if ($_SESSION['thing4'] > 0) {
 
 if (isset($_POST['one'])) {
 	$_SESSION['thing1'] = 0;
+	echo "<meta http-equiv='refresh' content='0'>";
 }
 //echo $_SESSION["thing1"];
 //echo $_SESSION["thing2"];
