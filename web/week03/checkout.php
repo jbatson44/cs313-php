@@ -34,6 +34,8 @@ session_start();
             <span style="color:red">* </span>
             <span class="zip" style="color:red">Invalid</span>
           </div>
+		  <input type='submit' name='submit' value='Confirm'>
+          <input type='submit' name='submit' value='Cancel'>
 		</form>
 	</body>
 </html>
