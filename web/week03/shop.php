@@ -18,7 +18,7 @@
 					<td>thing1</td>
 					<td><input type="number" min="0" max="100" value="0" name="number[]" id="number1"></td>
 					<td name="price1" value="1" id="price1">$1.00<td>
-					<td><input type="button" name="item[]" value="add thing1" onclick="addThing1(number1, price1)"></td>
+					<td><input type="button" name="item[]" value="add thing1" onclick="addThing1(number1.value, price1.value)"></td>
 				</tr>
 				<tr>
 					<td>thing2</td>
