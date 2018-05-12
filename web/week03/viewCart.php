@@ -47,17 +47,17 @@ if (isset($_POST['one'])) {
 if (isset($_POST['two'])) {
 	$_SESSION['thing1'] = 0;
 	echo "<meta http-equiv='refresh' content='0'>";
-	unset($_POST['one']);
+	unset($_POST['two']);
 }
 if (isset($_POST['three'])) {
 	$_SESSION['thing1'] = 0;
 	echo "<meta http-equiv='refresh' content='0'>";
-	unset($_POST['one']);
+	unset($_POST['three']);
 }
 if (isset($_POST['four'])) {
 	$_SESSION['thing1'] = 0;
 	echo "<meta http-equiv='refresh' content='0'>";
-	unset($_POST['one']);
+	unset($_POST['four']);
 }
 //echo $_SESSION["thing1"];
 //echo $_SESSION["thing2"];
