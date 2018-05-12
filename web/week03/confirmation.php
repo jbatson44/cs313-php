@@ -10,7 +10,7 @@ session_start();
 	<body>
 	<h1>Confirmation</h1>
 <?php
-
+echo "Thing1 =" . $_SESSION['thing1'];
 ?>
 
 	</body>
