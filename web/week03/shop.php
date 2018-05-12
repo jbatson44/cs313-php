@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Browse Items</title>
+		<script src="shopScript.js"></script>
 	</head>
 	<body>
 		<h1>Items</h2>
@@ -17,7 +18,7 @@
 					<td>thing1</td>
 					<td><input type="number" min="0" max="100" value="0" name="number[]"></td>
 					<td name="price1" value="1">$1.00<td>
-					<td><input type="button" name="item[]" value="add thing1"></td>
+					<td><input type="button" name="item[]" value="add thing1" onclick="addThing1(number[0], price1)"></td>
 				</tr>
 				<tr>
 					<td>thing2</td>
