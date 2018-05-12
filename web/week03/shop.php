@@ -5,7 +5,7 @@ session_start();
 <html>
 	<head>
 		<title>Browse Items</title>
-		<script src="shopScript.js"></script>
+		<script type="text/javascript" src="shopScript.js"></script>
 	</head>
 	<body>
 		<a href="viewCart.php">Cart</a>
