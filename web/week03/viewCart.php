@@ -13,6 +13,11 @@ session_start();
 				<th>Price</th>
 			</tr>
 <?php
+echo "Session1: " . $_SESSION['thing1'];
+echo "Session2: " . $_SESSION['thing2'];
+echo "Session3: " . $_SESSION['thing3'];
+echo "Session4: " . $_SESSION['thing4'];
+
 if ($_SESSION['thing1'] > 0) {
 	echo "<form method='post' action='viewCart.php'>";
 	echo "<tr><td>Thing1</td><td>" . $_SESSION['thing1'] . "</td><td>$" . $_SESSION['thing1'] * 1 . "</td>
