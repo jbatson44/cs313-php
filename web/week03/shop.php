@@ -6,41 +6,36 @@
 	</head>
 	<body>
 		<h1>Items</h2>
-		
+		<form method="post" action="<?php echo'itworked' ?>">
 			<table>
 				<tr>
 					<th>Item</th>
-					<th>Quantity</th>
 					<th>Price</th>
-					<th>Add</th>
+					<th></th>
 				</tr>
 				<tr>
 					<td>thing1</td>
-					<td><input type="number" min="0" max="100" value="0" name="number[]" id="number1"></td>
 					<td name="price1" value="1" id="price1">$1.00<td>
-					<td><input type="button" name="item[]" value="add thing1" onclick="addThing1(number1.value, price1.value)"></td>
+					<td><input type="submit" name="item[]" value="add to cart"></td>
 				</tr>
 				<tr>
 					<td>thing2</td>
-					<td><input type="number" min="0" max="100" value="0" name="number[]"></td>
 					<td>$2.00<td>
-					<td><input type="button" name="item[]" value="add thing2"></td>
+					<td><input type="button" name="item[]" value="add to cart"></td>
 				</tr>
 				<tr>
 					<td>thing3</td>
-					<td><input type="number" min="0" max="100" value="0" name="number[]"></td>
 					<td>$3.00<td>
-					<td><input type="button" name="item[]" value="add thing3"></td>
+					<td><input type="button" name="item[]" value="add to cart"></td>
 
 				</tr>
 				<tr>
 					<td>thing4</td>
-					<td><input type="number" min="0" max="100" value="0" name="number[]"></td>
 					<td>$4.00<td>
-					<td><input type="button" name="item[]" value="add thing4"></td>
+					<td><input type="button" name="item[]" value="add to cart"></td>
 				</tr>
 			</table>
 			
-		
+		</form>
 	</body>
 </html>
