@@ -54,18 +54,19 @@ if (isset($_POST['submit'])) {
 	$_SESSION['thing2'] = $_POST['thing2'];
 	$_SESSION['thing3'] = $_POST['thing3'];
 	$_SESSION['thing4'] = $_POST['thing4'];
-	if ($_SESSION['thing1'] > 0) {
-		echo "Session1: " . $_SESSION['thing1'] . "<br>";
-	}
-	if ($_SESSION['thing2'] > 0) {
-		echo "Session2: " . $_SESSION['thing2'] . "<br>";
-	}
-	if ($_SESSION['thing3'] > 0) {
-		echo "Session3: " . $_SESSION['thing3'] . "<br>";
-	}
-	if ($_SESSION['thing4'] > 0) {
-		echo "Session4: " . $_SESSION['thing4'] . "<br>";
-	}
+	echo "Items added!";
+	//if ($_SESSION['thing1'] > 0) {
+	//	echo "Session1: " . $_SESSION['thing1'] . "<br>";
+	//}
+	//if ($_SESSION['thing2'] > 0) {
+	//	echo "Session2: " . $_SESSION['thing2'] . "<br>";
+	//}
+	//if ($_SESSION['thing3'] > 0) {
+	//	echo "Session3: " . $_SESSION['thing3'] . "<br>";
+	//}
+	//if ($_SESSION['thing4'] > 0) {
+	//	echo "Session4: " . $_SESSION['thing4'] . "<br>";
+	//}
 }
 
 ?> 
