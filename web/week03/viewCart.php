@@ -14,7 +14,7 @@ session_start();
 			</tr>
 <?php
 if ($_SESSION['thing1'] > 0) {
-	echo "<form method='post'>"
+	echo "<form method='post' action='viewCart.php'>"
 	echo "<tr><td>Thing1</td><td>" . $_SESSION['thing1'] . "</td><td>$" . $_SESSION['thing1'] * 1 . "</td>
 	<td><input type='submit' name='one' value='Delete item'></td></tr>";
 	echo "</form>"
@@ -27,6 +27,11 @@ if ($_SESSION['thing3'] > 0) {
 }
 if ($_SESSION['thing4'] > 0) {
 	echo "<tr><td>Thing4</td><td>" . $_SESSION['thing4'] . "</td><td>$" . $_SESSION['thing4'] * 4 . "</td></tr>";
+}
+
+
+if (isset($_POST['one'])) {
+	$_SESSION['thing1'] = 0;
 }
 //echo $_SESSION["thing1"];
 //echo $_SESSION["thing2"];
