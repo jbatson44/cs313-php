@@ -13,11 +13,6 @@ session_start();
 				<th>Price</th>
 			</tr>
 <?php
-echo "Session1: " . $_SESSION['thing1'] . "<br>";
-echo "Session2: " . $_SESSION['thing2'] . "<br>";
-echo "Session3: " . $_SESSION['thing3'] . "<br>";
-echo "Session4: " . $_SESSION['thing4'] . "<br>";
-
 if ($_SESSION['thing1'] > 0) {
 	echo "<form method='post' action='viewCart.php'>";
 	echo "<tr><td>Thing1</td><td>" . $_SESSION['thing1'] . "</td><td>$" . $_SESSION['thing1'] * 1 . "</td>
@@ -47,18 +42,22 @@ if ($_SESSION['thing4'] > 0) {
 if (isset($_POST['one'])) {
 	$_SESSION['thing1'] = 0;
 	echo "<meta http-equiv='refresh' content='0'>";
+	unset($_POST['one']);
 }
 if (isset($_POST['two'])) {
 	$_SESSION['thing1'] = 0;
 	echo "<meta http-equiv='refresh' content='0'>";
+	unset($_POST['one']);
 }
 if (isset($_POST['three'])) {
 	$_SESSION['thing1'] = 0;
 	echo "<meta http-equiv='refresh' content='0'>";
+	unset($_POST['one']);
 }
 if (isset($_POST['four'])) {
 	$_SESSION['thing1'] = 0;
 	echo "<meta http-equiv='refresh' content='0'>";
+	unset($_POST['one']);
 }
 //echo $_SESSION["thing1"];
 //echo $_SESSION["thing2"];
