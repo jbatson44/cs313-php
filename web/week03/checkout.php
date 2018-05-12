@@ -34,8 +34,10 @@ session_start();
             <span style="color:red">* </span>
             <span class="zip" style="color:red">Invalid</span>
           </div>
-		  <input type='submit' name='submit' value='Confirm'>
-          <input type='submit' name='submit' value='Cancel'>
+		  <input type='submit' name='submit' value='Complete purchase'>
+		  </form>
+		  <form action="viewCart.php">
+          <input type='submit' name='submit' value='Return to cart'>
 		</form>
 	</body>
 </html>
