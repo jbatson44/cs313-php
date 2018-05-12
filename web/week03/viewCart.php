@@ -13,14 +13,18 @@
 //if(!empty($_POST['cart'])){
 //foreach($_POST['cart'] as $selected){
 //echo "<tr><td>" . $selected . "</td><td>" .  . "</tr>";}}
-$items = $_POST["item"];
-$amounts = $_POST["number"];
-$price = $_POST["price1"];
-for ($i = 0; $i < count($items); $i++) {
-	$total = 2 * amounts[$i];
-	echo "<tr><td>" . $items[$i] . "</td><td>" . $amounts[$i] . "</td><td>" . $total . "</td></tr>";
+//$items = $_POST["item"];
+//$amounts = $_POST["number"];
+//$price = $_POST["price1"];
+//for ($i = 0; $i < count($items); $i++) {
+//	$total = 2 * amounts[$i];
+//	echo "<tr><td>" . $items[$i] . "</td><td>" . $amounts[$i] . "</td><td>" . $total . "</td></tr>";
 
-}
+//}
+echo $_SESSION["thing1"];
+echo $_SESSION["thing2"];
+echo $_SESSION["thing3"];
+echo $_SESSION["thing4"];
 ?>
 		</table>
 	</body>
