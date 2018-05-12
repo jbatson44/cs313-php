@@ -14,10 +14,10 @@ session_start();
 			</tr>
 <?php
 if ($_SESSION['thing1'] > 0) {
-	//echo "<form method='post' action='viewCart.php'>"
+	echo "<form method='post' action='viewCart.php'>";
 	echo "<tr><td>Thing1</td><td>" . $_SESSION['thing1'] . "</td><td>$" . $_SESSION['thing1'] * 1 . "</td>
 	<td><input type='submit' name='one' value='Delete item'></td></tr>";
-	echo "</form>"
+	echo "</form>";
 }
 if ($_SESSION['thing2'] > 0) {
 	echo "<tr><td>Thing2</td><td>" . $_SESSION['thing2'] . "</td><td>$" . $_SESSION['thing2'] * 2 . "</td></tr>";
