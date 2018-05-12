@@ -14,7 +14,7 @@ session_start();
 			</tr>
 <?php
 if ($_SESSION['thing1'] > 0) {
-	echo "<form method='post' action=''>"
+	echo "<form method='post'>"
 	echo "<tr><td>Thing1</td><td>" . $_SESSION['thing1'] . "</td><td>$" . $_SESSION['thing1'] * 1 . "</td>
 	<td><input type='submit' name='one' value='Delete item'></td></tr>";
 	echo "</form>"
