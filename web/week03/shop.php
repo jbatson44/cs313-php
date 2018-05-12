@@ -50,16 +50,16 @@ session_start();
 				<td><input type="submit" name="submit" value="add to cart"></td>
 				</form>
 <?php
-if ($_SESSION['thing1'] < 1) {
+if ($_SESSION['thing1'] == 0) {
 	unset($_SESSION['thing1']);
 }
-if ($_SESSION['thing2'] < 1) {
+if ($_SESSION['thing2'] == 0) {
 	unset($_SESSION['thing2']);
 }
-if ($_SESSION['thing3'] < 1) {
+if ($_SESSION['thing3'] == 0) {
 	unset($_SESSION['thing3']);
 }
-if ($_SESSION['thing4'] < 1) {
+if ($_SESSION['thing4'] == 0) {
 	unset($_SESSION['thing4']);
 }
 if (isset($_POST['submit'])) {
