@@ -51,16 +51,16 @@ session_start();
 				</form>
 <?php
 if (isset($_POST['submit'])) {
-	if (!isset($_SESSION['thing1'])) {
+	if ((!isset($_SESSION['thing1'])) && ($_POST['thing1'] > 0)) {
 		$_SESSION['thing1'] = $_POST['thing1'];
 	}
-	if (!isset($_SESSION['thing1'])) {
+	if ((!isset($_SESSION['thing1'])) && ($_POST['thing2'] > 0)) {
 		$_SESSION['thing2'] = $_POST['thing2'];
 	}
-	if (!isset($_SESSION['thing1'])) {
+	if ((!isset($_SESSION['thing1'])) && ($_POST['thing3'] > 0)) {
 		$_SESSION['thing3'] = $_POST['thing3'];
 	}
-	if (!isset($_SESSION['thing1'])) {
+	if ((!isset($_SESSION['thing1'])) && ($_POST['thing4'] > 0)) {
 		$_SESSION['thing4'] = $_POST['thing4'];
 	}
 	//$_SESSION['thing2'] = $_POST['thing2'];
