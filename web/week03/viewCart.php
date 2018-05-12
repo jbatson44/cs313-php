@@ -28,7 +28,7 @@ session_start();
 if ($_SESSION["$thing1"] > 0) {
 	echo "<tr><td>Thing1</td><td>" . $_SESSION["$thing1"] . "</td><td>$" . $_SESSION["$thing1"] * 2 . "</td></tr>";
 }
-echo $_SESSION["thing1"];
+//echo $_SESSION["thing1"];
 echo $_SESSION["thing2"];
 echo $_SESSION["thing3"];
 echo $_SESSION["thing4"];
