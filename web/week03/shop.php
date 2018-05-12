@@ -14,12 +14,14 @@ session_start();
 			<table>
 				<tr>
 					<th>Item</th>
+					<th>Quantity</th>
 					<th>Price</th>
 					<th></th>
 				</tr>
 				<form method="post" action="">
 				<tr>
-					<td name="thing1" value="thing1">thing1</td>
+					<td>thing1</td>
+					<td><input type="number" name="thing1" value="0" min="0" max="100"></td>
 					<td name="price1" value="1" id="price1">$1.00<td>
 					<td><input type="submit" name="one" value="add to cart"></td>
 				</tr>
