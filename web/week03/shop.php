@@ -23,55 +23,55 @@ session_start();
 					<td>thing1</td>
 					<td><input type="number" name="thing1" value="0" min="0" max="100"></td>
 					<td name="price1" value="1" id="price1">$1.00<td>
-					<td><input type="submit" name="one" value="add to cart"></td>
+					<td><input type="submit" name="submit" value="add to cart"></td>
 				</tr>
-				</form>
-				<form method="post" action="">
+		
 				<tr>
 					<td>thing2</td>
 					<td><input type="number" name="thing2" value="0" min="0" max="100"></td>
 					<td>$2.00<td>
-					<td><input type="button" name="two" value="add to cart"></td>
+					<td><input type="button" name="submit" value="add to cart"></td>
 				</tr>
-				</form>
-				<form method="post" action="">
+			
 				<tr>
 					<td>thing3</td>
 					<td><input type="number" name="thing3" value="0" min="0" max="100"></td>
 					<td>$3.00<td>
-					<td><input type="button" name="three" value="add to cart"></td>
+					<td><input type="button" name="submit" value="add to cart"></td>
 
 				</tr>
-				</form>
-				<form method="post" action="">
+				
 				<tr>
 					<td>thing4</td>
 					<td><input type="number" name="thing4" value="0" min="0" max="100"></td>
 					<td>$4.00<td>
-					<td><input type="button" name="four" value="add to cart"></td>
+					<td><input type="button" name="submit" value="add to cart"></td>
 				</tr>
 				</form>
 <?php
-if (isset($_POST['one'])) {
+if (isset($_POST['submit'])) {
     $_SESSION['thing1'] = $_POST['thing1'];
-	 
-	echo "Session: " . $_SESSION['thing1'];
+	$_SESSION['thing2'] = $_POST['thing2'];
+	$_SESSION['thing3'] = $_POST['thing3'];
+	$_SESSION['thing4'] = $_POST['thing4'];
+	if ($_SESSION['thing1'] > 0) {
+		echo "Session1: " . $_SESSION['thing1'];
+	}
+	if ($_SESSION['thing2'] > 0) {
+		echo "Session2: " . $_SESSION['thing2'];
+	}
+	if ($_SESSION['thing3'] > 0) {
+		echo "Session3: " . $_SESSION['thing3'];
+	}
+	if ($_SESSION['thing4'] > 0) {
+		echo "Session4: " . $_SESSION['thing4'];
+	}
+	echo "Session1: " . $_SESSION['thing1'];
+	echo "Session2: " . $_SESSION['thing2'];
+	echo "Session3: " . $_SESSION['thing3'];
+	echo "Session4: " . $_SESSION['thing4'];
 }
-if (isset($_POST['two'])) {
-    $_SESSION['thing2'] = $_POST['thing2'];
-	
-	echo "Session: " . $_SESSION['thing2'];
-}
-if (isset($_POST['three'])) {
-    $_SESSION['thing3'] = $_POST['thing3'];
-	
-	echo "Session: " . $_SESSION['thing3'];
-}
-if (isset($_POST['four'])) {
-    $_SESSION['thing4'] = $_POST['thing4'];
-	
-	echo "Session: " . $_SESSION['thing4'];
-}
+
 ?> 
 			</table>
 			
