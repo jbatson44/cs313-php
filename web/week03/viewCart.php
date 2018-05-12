@@ -43,5 +43,7 @@ if ($_SESSION['thing4'] > 0) {
 //echo $_SESSION["thing4"];
 ?>
 		</table>
+		<a href="shop.php">Return to browse page</a>
+		<a href="checkout.php">Move on to checkout</a>
 	</body>
 </html>
