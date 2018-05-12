@@ -52,3 +52,14 @@ function validateZip() {
     document.getElementsByClassName("zip")[0].style.visibility = 'initial';
     return false;
 }
+
+function required() {
+  if (validateCity() && validateAddress() && validateState() && validateZip()) {
+    document.getElementById("myform").submit();
+    return true;  
+  }
+  else {
+    alert("All input must be correct!");
+    return false;
+  }
+}

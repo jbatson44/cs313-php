@@ -9,7 +9,7 @@ session_start();
 	</head>
 	<body>
 		<h1>Checkout</h1>
-		<form method="post" action="confirmation.php">
+		<form method="post" onsubmit="return required()" action="confirmation.php">
 			<div id="cityName">
             City: <br>
             <input oninput="validateCity()" type="text" name="city"><span style="color:red"> * </span>
