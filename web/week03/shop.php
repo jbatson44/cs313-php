@@ -49,6 +49,8 @@ session_start();
 <?php
 if (isset($_POST['one'])) {
      $_SESSION['thing1'] = $_POST['thing1'];
+	 
+	 echo "Session: " . $_SESSION['thing1'];
 }
 if (isset($_POST['two'])) {
      $_SESSION['thing2'] = $_POST['thing2'];
