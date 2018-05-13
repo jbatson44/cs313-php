@@ -18,28 +18,28 @@ session_start();
 if ($_SESSION['thing1'] > 0) {
 	$_SESSION['thing1price'] = $_SESSION['thing1'] * 1;
 	echo "<form method='post' action='viewCart.php'>";
-	echo "<tr><td>Thing1</td><td>" . $_SESSION['thing1'] . "</td><td>$" . $_SESSION['thing1price'] . "</td>
+	echo "<tr><td>KitKat</td><td>" . $_SESSION['thing1'] . "</td><td>$" . $_SESSION['thing1price'] . "</td>
 	<td><input type='submit' name='one' value='Delete item'></td></tr>";
 	echo "</form>";
 }
 if ($_SESSION['thing2'] > 0) {
 	$_SESSION['thing2price'] = $_SESSION['thing2'] * 2;
 	echo "<form method='post' action='viewCart.php'>";
-	echo "<tr><td>Thing2</td><td>" . $_SESSION['thing2'] . "</td><td>$" . $_SESSION['thing2price'] . "</td>
+	echo "<tr><td>Snickers</td><td>" . $_SESSION['thing2'] . "</td><td>$" . $_SESSION['thing2price'] . "</td>
 	<td><input type='submit' name='two' value='Delete item'></td></tr>";
 	echo "</form>";
 }
 if ($_SESSION['thing3'] > 0) {
 	$_SESSION['thing3price'] = $_SESSION['thing3'] * 3;
 	echo "<form method='post' action='viewCart.php'>";
-	echo "<tr><td>Thing3</td><td>" . $_SESSION['thing3'] . "</td><td>$" . $_SESSION['thing3price'] . "</td>
+	echo "<tr><td>Hershey's</td><td>" . $_SESSION['thing3'] . "</td><td>$" . $_SESSION['thing3price'] . "</td>
 	<td><input type='submit' name='three' value='Delete item'></td></tr>";
 	echo "</form>";
 }
 if ($_SESSION['thing4'] > 0) {
 	$_SESSION['thing4price'] = $_SESSION['thing4'] * 4;
 	echo "<form method='post' action='viewCart.php'>";
-	echo "<tr><td>Thing4</td><td>" . $_SESSION['thing4'] . "</td><td>$" . $_SESSION['thing4price'] . "</td>
+	echo "<tr><td>Twix</td><td>" . $_SESSION['thing4'] . "</td><td>$" . $_SESSION['thing4price'] . "</td>
 	<td><input type='submit' name='four' value='Delete item'></td></tr>";
 	echo "</form>";
 }

@@ -22,7 +22,7 @@ session_start();
 				<form method="post" action="">
 				<tr>
 					<td><img src="https://smartlabel.hersheys.com/images/0c75f9d4-4a51-4f2e-bcc9-3c7dae4d69c3.png" alt="kitkat" width="300" height="300"></td>
-					<td>Kit-Kat</td>
+					<td>KitKat</td>
 					<td><input type="number" name="thing1" value="0" min="0" max="100"></td>
 					<td name="price1" value="1" id="price1">$1.00</td>	
 				</tr>
