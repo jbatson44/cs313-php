@@ -45,23 +45,27 @@ if ($_SESSION['thing4'] > 0) {
 
 if (isset($_POST['one'])) {
 	$_SESSION['thing1'] = 0;
-	echo "<meta http-equiv='refresh' content='0'>";
+	unset($_SESSION['thing1price']);
 	unset($_POST['one']);
+	echo "<meta http-equiv='refresh' content='0'>";
 }
 if (isset($_POST['two'])) {
 	$_SESSION['thing2'] = 0;
-	echo "<meta http-equiv='refresh' content='0'>";
+	unset($_SESSION['thing2price']);
 	unset($_POST['two']);
+	echo "<meta http-equiv='refresh' content='0'>";
 }
 if (isset($_POST['three'])) {
 	$_SESSION['thing3'] = 0;
-	echo "<meta http-equiv='refresh' content='0'>";
+	unset($_SESSION['thing3price']);
 	unset($_POST['three']);
+	echo "<meta http-equiv='refresh' content='0'>";
 }
 if (isset($_POST['four'])) {
 	$_SESSION['thing4'] = 0;
-	echo "<meta http-equiv='refresh' content='0'>";
 	unset($_POST['four']);
+	unset($_SESSION['thing4price']);
+	echo "<meta http-equiv='refresh' content='0'>";
 }
 //echo $_SESSION["thing1"];
 //echo $_SESSION["thing2"];
