@@ -1,5 +1,10 @@
 <?php
 session_start();
+		
+$_SESSION['city'] = $_POST['city'];
+$_SESSION['state'] = $_POST['state'];
+$_SESSION['address'] = $_POST['address'];
+$_SESSION['zip'] = $_POST['zip'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,6 +38,7 @@ if ($_SESSION['thing4'] > 0) {
 		</table>
 <?php
 echo "<p><b>Total: $" . $_SESSION['total'] . "</b></p>";
+echo "<p>Your order is being sent to: " . $_SESSION['address'] . " " . $_SESSION['city'] . ", " . $_SESSION['state'] . " " . $_SESSION['zip'];
 ?>		
 	</body>
 </html>
