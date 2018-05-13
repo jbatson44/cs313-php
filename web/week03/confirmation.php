@@ -1,10 +1,14 @@
 <?php
 session_start();
 		
-$_SESSION['city'] = $_POST['city'];
-$_SESSION['state'] = $_POST['state'];
-$_SESSION['address'] = $_POST['address'];
-$_SESSION['zip'] = $_POST['zip'];
+//$_SESSION['city'] = $_POST['city'];
+//$_SESSION['state'] = $_POST['state'];
+//$_SESSION['address'] = $_POST['address'];
+//$_SESSION['zip'] = $_POST['zip'];
+$city = test_input($_POST["city"]);
+$state = test_input($_POST["state"]);
+$address = test_input($_POST["address"]);
+$zip = test_input($_POST["zip"]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +43,7 @@ if ($_SESSION['thing4'] > 0) {
 		</table>
 <?php
 echo "<p class='confirm'><b>Total: $" . $_SESSION['total'] . "</b></p>";
-echo "<p class='confirm'>Your order is being sent to: " . $_SESSION['address'] . " " . $_SESSION['city'] . ", " . $_SESSION['state'] . " " . $_SESSION['zip'];
+echo "<p class='confirm'>Your order is being sent to: " . $address . " " . $city . ", " . $state . " " . $zip;
 ?>		
 	</body>
 </html>
