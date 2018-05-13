@@ -6,6 +6,7 @@ session_start();
 	<head>
 		<title>Browse Items</title>
 		<script type="text/javascript" src="shopScript.js"></script>
+		<link rel="stylesheet" href="shopstyle.css">
 	</head>
 	<body>
 		<a href="viewCart.php">Cart</a>
@@ -13,6 +14,7 @@ session_start();
 		
 			<table>
 				<tr>
+					<th></th>
 					<th>Item</th>
 					<th>Quantity</th>
 					<th>Price</th>
@@ -20,28 +22,29 @@ session_start();
 				</tr>
 				<form method="post" action="">
 				<tr>
+					<td></td>
 					<td>thing1</td>
 					<td><input type="number" name="thing1" value="0" min="0" max="100"></td>
 					<td name="price1" value="1" id="price1">$1.00<td>
 					
 				</tr>
-		
 				<tr>
+				<td></td>
 					<td>thing2</td>
 					<td><input type="number" name="thing2" value="0" min="0" max="100"></td>
 					<td>$2.00<td>
 					
 				</tr>
-			
 				<tr>
+				<td></td>
 					<td>thing3</td>
 					<td><input type="number" name="thing3" value="0" min="0" max="100"></td>
 					<td>$3.00<td>
 					
 
 				</tr>
-				
 				<tr>
+					<td></td>
 					<td>thing4</td>
 					<td><input type="number" name="thing4" value="0" min="0" max="100"></td>
 					<td>$4.00<td>

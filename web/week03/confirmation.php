@@ -11,6 +11,7 @@ $_SESSION['zip'] = $_POST['zip'];
 	<head>
 		<title>Confirmation</title>
 		<script type="text/javascript" src="shopScript.js"></script>
+		<link rel="stylesheet" href="shopstyle.css">
 	</head>
 	<body>
 		<h1>Confirmation</h1>

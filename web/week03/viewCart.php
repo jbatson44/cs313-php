@@ -4,6 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="shopstyle.css">
 	</head>
 	<body>
 		<table>
@@ -67,22 +68,18 @@ if (isset($_POST['four'])) {
 	unset($_SESSION['thing4price']);
 	echo "<meta http-equiv='refresh' content='0'>";
 }
-//echo $_SESSION["thing1"];
-//echo $_SESSION["thing2"];
-//echo $_SESSION["thing3"];
-//echo $_SESSION["thing4"];
 ?>
 		</table>
-		<?php
-		$_SESSION['total'] = $_SESSION['thing1price'] + $_SESSION['thing2price'] + $_SESSION['thing3price'] + $_SESSION['thing4price'];
-		echo "<p><b>Total: $" . $_SESSION['total'] . "</b></p>";
-		?>
+<?php
+$_SESSION['total'] = $_SESSION['thing1price'] + $_SESSION['thing2price'] + $_SESSION['thing3price'] + $_SESSION['thing4price'];
+echo "<p><b>Total: $" . $_SESSION['total'] . "</b></p>";
+?>
 		<form action="shop.php">
 			<input type='submit' name='submit' value='Return to browse items'>
 		</form>
+		<br>
 		<form action="checkout.php">
           <input type='submit' name='submit' value='Move on to checkout'>
 		</form>
-		
 	</body>
 </html>
