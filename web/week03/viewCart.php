@@ -77,7 +77,12 @@ if (isset($_POST['four'])) {
 		$_SESSION['total'] = $_SESSION['thing1price'] + $_SESSION['thing2price'] + $_SESSION['thing3price'] + $_SESSION['thing4price'];
 		echo "<p><b>Total: $" . $_SESSION['total'] . "</b></p>";
 		?>
-		<a href="shop.php">Return to browse page</a>
-		<a href="checkout.php">Move on to checkout</a>
+		<form action="shop.php">
+			<input type='submit' name='submit' value='Return to browse items'>
+		</form>
+		<form action="checkout.php">
+          <input type='submit' name='submit' value='Move on to checkout'>
+		</form>
+		
 	</body>
 </html>
