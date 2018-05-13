@@ -12,6 +12,7 @@ session_start();
 				<th>Item</th>
 				<th>Quantity</th>
 				<th>Price</th>
+				<th></th>
 			</tr>
 <?php
 if ($_SESSION['thing1'] > 0) {

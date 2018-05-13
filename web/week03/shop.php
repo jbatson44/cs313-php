@@ -9,9 +9,9 @@ session_start();
 		<link rel="stylesheet" href="shopstyle.css">
 	</head>
 	<body>
-		<a href="viewCart.php">Cart</a>
-		<h1>Items</h2>
-		
+		<a id="cartlink" href="viewCart.php">Cart</a>
+		<h1>Candies!</h2>
+		<p>Simply specify how much you want of each and then press the "add to cart" button at the bottom.</p>
 			<table>
 				<tr>
 					<th></th>
@@ -24,25 +24,25 @@ session_start();
 					<td><img src="https://smartlabel.hersheys.com/images/0c75f9d4-4a51-4f2e-bcc9-3c7dae4d69c3.png" alt="kitkat" width="300" height="300"></td>
 					<td>Kit-Kat</td>
 					<td><input type="number" name="thing1" value="0" min="0" max="100"></td>
-					<td name="price1" value="1" id="price1">$1.00<td>	
+					<td name="price1" value="1" id="price1">$1.00</td>	
 				</tr>
 				<tr>
 					<td><img src="https://images-na.ssl-images-amazon.com/images/I/71%2Br1gAwsZL._SL1500_.jpg" alt="snickers" width="300" height="300"></td>
 					<td>Snickers</td>
 					<td><input type="number" name="thing2" value="0" min="0" max="100"></td>
-					<td>$2.00<td>
+					<td>$2.00</td>
 				</tr>
 				<tr>
 					<td><img src="http://www.sweetservices.com/images/P/hershey%20bar.jpg" alt="hersheys" width="300" height="300"></td>
 					<td>Hershey's</td>
 					<td><input type="number" name="thing3" value="0" min="0" max="100"></td>
-					<td>$3.00<td>
+					<td>$3.00</td>
 				</tr>
 				<tr>
 					<td><img src="https://images-na.ssl-images-amazon.com/images/I/71aMHKhes2L._SL1500_.jpg" alt="twix" width="300" height="300"></td>
 					<td>Twix</td>
 					<td><input type="number" name="thing4" value="0" min="0" max="100"></td>
-					<td>$4.00<td>
+					<td>$4.00</td>
 				</tr>
 <?php
 if ($_SESSION['thing1'] == 0) {
