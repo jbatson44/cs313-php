@@ -14,8 +14,8 @@ $_SESSION['zip'] = $_POST['zip'];
 		<link rel="stylesheet" href="shopstyle.css">
 	</head>
 	<body>
-		<h1>Confirmation</h1>
-		<table>
+		<p class="confirm">Thank you for your purchase!</p>
+		<table class="confirm">
 			<tr>
 				<th>Item</th>
 				<th>Quantity</th>
@@ -38,8 +38,8 @@ if ($_SESSION['thing4'] > 0) {
 ?>
 		</table>
 <?php
-echo "<p><b>Total: $" . $_SESSION['total'] . "</b></p>";
-echo "<p>Your order is being sent to: " . $_SESSION['address'] . " " . $_SESSION['city'] . ", " . $_SESSION['state'] . " " . $_SESSION['zip'];
+echo "<p class='confirm'><b>Total: $" . $_SESSION['total'] . "</b></p>";
+echo "<p class='confirm'>Your order is being sent to: " . $_SESSION['address'] . " " . $_SESSION['city'] . ", " . $_SESSION['state'] . " " . $_SESSION['zip'];
 ?>		
 	</body>
 </html>

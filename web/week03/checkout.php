@@ -37,6 +37,7 @@ session_start();
 			</div>
 			<input type='submit' name='submit' value='Complete purchase'>
 		</form>
+		<br>
 		<form action="viewCart.php">
 			<input type='submit' name='submit' value='Return to cart'>
 		</form>
