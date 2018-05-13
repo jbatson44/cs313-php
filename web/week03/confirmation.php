@@ -5,10 +5,6 @@ $_SESSION['city'] = $_POST['city'];
 $_SESSION['state'] = $_POST['state'];
 $_SESSION['address'] = $_POST['address'];
 $_SESSION['zip'] = $_POST['zip'];
-$city = test_input($_POST["city"]);
-$state = test_input($_POST["state"]);
-$address = test_input($_POST["address"]);
-$zip = test_input($_POST["zip"]);
 ?>
 <!DOCTYPE html>
 <html>
