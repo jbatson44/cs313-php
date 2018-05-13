@@ -34,7 +34,7 @@ session_start();
                    type="text" name="zip">
 				<span style="color:red">* </span>
 				<span class="zip" style="color:red">Invalid</span>
-			</div>
+			</div><br>
 			<input type='submit' name='submit' value='Complete purchase'>
 		</form>
 		<br>
