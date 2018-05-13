@@ -3,5 +3,13 @@ body {
 	padding-right:50px;
 }
 table {
-	
+	border-top: solid black 5px;
+	border-bottom: solid black 5px;
+}
+tr {
+	border: solid black 3px;
+}
+td {
+	border-left: solid black 3px;
+	border-right: solid black 3px;
 }
