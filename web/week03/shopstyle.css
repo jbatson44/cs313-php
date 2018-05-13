@@ -3,10 +3,12 @@ body {
 	padding-right:50px;
 }
 table {
-	width: 45%;
+	width: 50%;
 	border-top: solid black 2px;
 	border-bottom: solid black 2px;
+	border-left: solid black 2px;
 	text-align: center;
+	font-size: 25px;
 }
 tr {
 
