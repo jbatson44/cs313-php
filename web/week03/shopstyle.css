@@ -11,7 +11,11 @@ table {
 table, tr, td {
 	border: solid black 1px;
 }
-
+td {
+	padding-left: 10px;
+	padding-right: 10px;
+}
 #cartlink {
 	float: right;
+	font-size: 25;
 }
