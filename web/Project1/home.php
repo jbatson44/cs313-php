@@ -13,8 +13,33 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FIT</title>
+	</head>
+	<body>
+		<table>
+<?php
 
+$statement = $db->prepare("SELECT username, password, weight, heightfeet, heightinch FROM users");
+$statement->execute();
+// Go through each result
 
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+	echo "<tr><td>Username: " . $row['username'] . "</td></tr>";
+	echo "<tr><td>Password: " . $row['password'] . "</td></tr>";
+	echo "<tr><td>Height: " . $row['heightfeet'] . "'" . $row['heightinch'] . "\"" . "</td></tr>";
+	echo "<tr><td>Current weight: " . $row['weight'] . "</td></tr>";
+
+	// The variable "row" now holds the complete record for that
+	// row, and we can access the different values based on their
+	// name
+	
+}
+?>
+		</table>
 <table>
 	<tr>
 		<th>Exercises</th>
