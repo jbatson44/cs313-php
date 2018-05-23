@@ -1,4 +1,5 @@
 <?php
+/*
 $dbUrl = getenv('DATABASE_URL');
 
 $dbopts = parse_url($dbUrl);
@@ -18,5 +19,7 @@ foreach ($db->query('SELECT username, password FROM note_user') as $row)
   echo 'user: ' . $row['username'];
   echo ' password: ' . $row['password'];
   echo '<br/>';
-}
+}*/
 ?>
+
+it works!
