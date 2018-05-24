@@ -19,9 +19,19 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		<title>FIT</title>
 	</head>
 	<body>
-	
+		<h1>FIT</h1>
+		
 <?php
-
+$statement = $db->prepare("SELECT username FROM users");
+$statement->execute();
+// Go through each result
+echo "<ul>";
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+	echo "<li>" . $row['username'] . "</li>";
+}
+echo "</ul>";
+/*
 $statement = $db->prepare("SELECT username, password, weight, heightfeet, heightinch FROM users");
 $statement->execute();
 // Go through each result
@@ -38,7 +48,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	// row, and we can access the different values based on their
 	// name
 	
-}
+}*/
 ?>
 		
 <table>
