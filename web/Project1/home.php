@@ -19,7 +19,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		<title>FIT</title>
 	</head>
 	<body>
-		<table>
+	
 <?php
 
 $statement = $db->prepare("SELECT username, password, weight, heightfeet, heightinch FROM users");
@@ -28,18 +28,19 @@ $statement->execute();
 
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
+	echo "<table>"
 	echo "<tr><td>Username: " . $row['username'] . "</td></tr>";
 	echo "<tr><td>Password: " . $row['password'] . "</td></tr>";
 	echo "<tr><td>Height: " . $row['heightfeet'] . "'" . $row['heightinch'] . "\"" . "</td></tr>";
 	echo "<tr><td>Current weight: " . $row['weight'] . " lbs</td></tr>";
-
+	echo "</table><br>"
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
 	
 }
 ?>
-		</table>
+		
 <table>
 	<tr>
 		<th>Exercises</th>
