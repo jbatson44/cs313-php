@@ -28,7 +28,8 @@ $statement->execute();
 echo "<ul>";
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo "<li><a href='$row['username'].php'>" . $row['username'] . "</a></li>";
+	
+	echo "<li><a href='" . $row['username'] . ".php'>" . $row['username'] . "</a></li>";
 }
 echo "</ul>";
 /*
