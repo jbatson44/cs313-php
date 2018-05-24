@@ -28,12 +28,12 @@ $statement->execute();
 
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo "<table>"
+	echo "<table>";
 	echo "<tr><td>Username: " . $row['username'] . "</td></tr>";
 	echo "<tr><td>Password: " . $row['password'] . "</td></tr>";
 	echo "<tr><td>Height: " . $row['heightfeet'] . "'" . $row['heightinch'] . "\"" . "</td></tr>";
 	echo "<tr><td>Current weight: " . $row['weight'] . " lbs</td></tr>";
-	echo "</table><br>"
+	echo "</table><br>";
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
