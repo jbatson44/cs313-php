@@ -31,7 +31,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	echo "<tr><td>Username: " . $row['username'] . "</td></tr>";
 	echo "<tr><td>Password: " . $row['password'] . "</td></tr>";
 	echo "<tr><td>Height: " . $row['heightfeet'] . "'" . $row['heightinch'] . "\"" . "</td></tr>";
-	echo "<tr><td>Current weight: " . $row['weight'] . "</td></tr>";
+	echo "<tr><td>Current weight: " . $row['weight'] . " lbs</td></tr>";
 
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
