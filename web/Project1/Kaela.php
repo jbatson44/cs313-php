@@ -52,11 +52,12 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
 $statement = $db->prepare("SELECT * FROM exercises WHERE routineid=$routineid");
 $statement->execute();
-
+echo "<ul>";
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo $row['exercise'];
+	echo "<li>" . $row['exercise'] . "</li>"; 
 }
+echo "</ul>";
 ?>
 	</body>
 </html>
