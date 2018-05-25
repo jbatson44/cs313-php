@@ -38,5 +38,17 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	echo "Current weight: " . $row['weight'] . " lbs<br>";
 }
 ?>
+
+<?php
+$statement = $db->prepare("SELECT * FROM routines WHERE userid=4");
+$statement->execute();
+// Go through each result
+
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+	$userid = $row['userid'];
+	echo "<h3>" . $row['routine'] . "</h3>";
+}
+?>
 	</body>
 </html>
