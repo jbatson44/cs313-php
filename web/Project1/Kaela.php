@@ -5,7 +5,7 @@
 	</head>
 	<body>
 <?php
-$statement = $db->prepare("SELECT * FROM users WHERE username = 'Kaela' ");
+$statement = $db->prepare("SELECT * FROM users");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
