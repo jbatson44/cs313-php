@@ -22,40 +22,47 @@ $statement->execute();
 <?php
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo "<title>User " . $row['username'] . "</title>";
+	$userid = $row['userid'];
+	$username = $row['username'];
+	$heightfeet = $row['heightfeet'];
+	$heightinch = $row['heightinch'];
+	$weight = $row['weight']
+	echo "<title>User " . $username . "</title>";
 }
 ?>
 	</head>
 	<body>
 <?php
-$statement = $db->prepare("SELECT * FROM users WHERE username='Kaela'");
+$statement = $db->prepare("SELECT * FROM users WHERE username=$username");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo "<h1>" . $row['username'] . "</h1>";
-	echo "Height: " . $row['heightfeet'] . "'" . $row['heightinch'] . "\"<br>";
-	echo "Current weight: " . $row['weight'] . " lbs<br>";
+	echo "<h1>" . $username . "</h1>";
+	echo "Height: " . $heightfeet . "'" . $heightinch . "\"<br>";
+	echo "Current weight: " . $weight . " lbs<br>";
 }
 ?>
-
+		<h2>Routines</h2>
 <?php
-$statement = $db->prepare("SELECT * FROM routines WHERE userid=4");
+$statement = $db->prepare("SELECT * FROM routines WHERE userid=$userid");
 $statement->execute();
 // Go through each result
 
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	$userid = $row['userid'];
 	$routineid = $row['routineid'];
-	echo "<h3>" . $row['routine'] . "</h3>";
+	$routine = $row['routine'];
+	echo "<h3>" . $routine . "</h3>";
 }
 $statement = $db->prepare("SELECT * FROM exercises WHERE routineid=$routineid");
 $statement->execute();
 echo "<ul>";
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo "<li>" . $row['exercise'] . "</li>"; 
+	$exerciseid = $row['exerciseid'];
+	$exercise = $row['exercise'];
+	echo "<li>" . $exercise . "</li>"; 
 }
 echo "</ul>";
 ?>
