@@ -23,7 +23,7 @@ $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$userid = $row['userid'];
-	$username = $row['username'];
+	$SESSION['username'] = $row['username'];
 	$heightfeet = $row['heightfeet'];
 	$heightinch = $row['heightinch'];
 	$weight = $row['weight'];
@@ -33,7 +33,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	</head>
 	<body>
 <?php
-$statement = $db->prepare("SELECT * FROM users WHERE username='Kaela'");
+$statement = $db->prepare("SELECT * FROM users WHERE username=$SESSION['username']");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
