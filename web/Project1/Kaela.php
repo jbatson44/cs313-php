@@ -33,7 +33,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	</head>
 	<body>
 <?php
-$statement = $db->prepare("SELECT * FROM users WHERE username=$SESSION['username']");
+$statement = $db->prepare("SELECT * FROM users WHERE username='Kaela'");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
