@@ -5,10 +5,12 @@
 	</head>
 	<body>
 <?php
-$statement = $db->prepare("SELECT username FROM users WHERE username = 'Adam'");
+$statement = $db->prepare("SELECT username FROM users");
 $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-	echo "<h1>" . $row['username'] . "</h1>"; 
+	if ($row['username'] == "Adam") {
+		echo "<h1>" . $row['username'] . "</h1>";
+	}	
 }
 ?>
 	</body>
