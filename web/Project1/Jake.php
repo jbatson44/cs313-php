@@ -31,7 +31,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo "<h1>" . $row['username'] . "</h1>";
+	echo $row['username'];
 }
 ?>
 	</body>
