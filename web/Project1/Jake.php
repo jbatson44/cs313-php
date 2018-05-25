@@ -28,10 +28,14 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	</head>
 	<body>
 <?php
+$statement = $db->prepare("SELECT * FROM users WHERE username='Jake'");
+$statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo $row['username'];
+	echo "<h1>" . $row['username'] . "</h1>";
+	echo "Height: " . $row['heightFeet'] . "'" . $row['heightInch'] . "\"<br>";
+	echo "Current weight: " . $row['weight'] . " lbs<br>";
 }
 ?>
 	</body>
