@@ -47,7 +47,15 @@ $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$userid = $row['userid'];
+	$routineid = $row['routineid'];
 	echo "<h3>" . $row['routine'] . "</h3>";
+}
+$statement = $db->prepare("SELECT * FROM exercises WHERE routineid=$routineid");
+$statement->execute();
+
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+	echo $row['exercise'];
 }
 ?>
 	</body>
