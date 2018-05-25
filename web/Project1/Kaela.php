@@ -26,7 +26,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$username = $row['username'];
 	$heightfeet = $row['heightfeet'];
 	$heightinch = $row['heightinch'];
-	$weight = $row['weight']
+	$weight = $row['weight'];
 	echo "<title>User " . $username . "</title>";
 }
 ?>
