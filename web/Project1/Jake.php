@@ -55,21 +55,22 @@ $routine;
 $i = 0;
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	$routineid = $row['routineid'];
-	$routine[$i] = $row['routine'];
+	$routineid[$i] = $row['routineid'];
+	$routine = $row['routine'];
 	echo "<h3>" . $routine[$i] . "</h3>";
+	$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='$i'");
+	$statement->execute();
+	echo "<ul class='routine'>";
+	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+	{
+		$exerciseid = $row['exerciseid'];
+		$exercise = $row['exercise'];
+		echo "<li>" . $exercise . "</li>"; 
+	}
+	echo "</ul>";
 	$i++;
 }
-$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='2'");
-$statement->execute();
-echo "<ul class='routine'>";
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-	$exerciseid = $row['exerciseid'];
-	$exercise = $row['exercise'];
-	echo "<li>" . $exercise . "</li>"; 
-}
-echo "</ul>";
+
 
 ?>
 	</body>
