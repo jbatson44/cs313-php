@@ -23,7 +23,7 @@ $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$userid = $row['userid'];
-	$SESSION['username'] = $row['username'];
+	$username = $row['username'];
 	$heightfeet = $row['heightfeet'];
 	$heightinch = $row['heightinch'];
 	$weight = $row['weight'];
