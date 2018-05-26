@@ -51,12 +51,14 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 $statement = $db->prepare("SELECT * FROM routines WHERE userid = '5'");
 $statement->execute();
 // Go through each result
-
+$routine;
+$i = 0;
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$routineid = $row['routineid'];
-	$routine = $row['routine'];
-	echo "<h3>" . $routine . "</h3>";
+	$routine[$i] = $row['routine'];
+	echo "<h3>" . $routine[$i] . "</h3>";
+	$i++;
 }
 $statement = $db->prepare("SELECT * FROM exercises WHERE routineid='2'");
 $statement->execute();
