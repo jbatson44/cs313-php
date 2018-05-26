@@ -38,7 +38,7 @@ $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo "<h1>" . $row['username'] . "</h1>";
+	echo "<h1>" . $username . "</h1>";
 	/*
 	echo "Height: " . $heightfeet . "'" . $heightinch . "\"<br>";
 	echo "Current weight: " . $weight . " lbs<br>";*/
