@@ -57,7 +57,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$routineid = $row['routineid'];
 	$routine = $row['routine'];
 	echo "<h3>" . $routine . "</h3>";
-	$statement = $db->prepare("SELECT * FROM exercises");
+	$statement = $db->prepare("SELECT * FROM exercises LIMIT 3 OFFSET 1");
 	$statement->execute();
 	echo "<ul class='routine'>";
 	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
