@@ -106,7 +106,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	}
 	echo "</ul>";
 }
-$statement = $db->prepare("SELECT * FROM routines WHERE userid = '5'");
+$statement = $db->prepare("SELECT * FROM routines WHERE userid = '5' AND routineid='4'");
 $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
