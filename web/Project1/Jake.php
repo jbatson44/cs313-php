@@ -55,10 +55,10 @@ $routine;
 $i = 0;
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	$routineid[$i] = $row['routineid'];
+	$routineid = $row['routineid'];
 	$routine = $row['routine'];
 	echo "<h3>" . $routine[$i] . "</h3>";
-	$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='$i'");
+	$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='2'");
 	$statement->execute();
 	echo "<ul class='routine'>";
 	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
