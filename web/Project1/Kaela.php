@@ -20,6 +20,11 @@ $statement->execute();
 <html>
 	<head>
 <?php
+$userid;
+$username;
+$heightfeet;
+$heightinch;
+$weight;
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$userid = $row['userid'];
