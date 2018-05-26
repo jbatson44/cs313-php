@@ -88,6 +88,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	}
 	echo "</ul>";*/
 }
+$statement = $db->prepare("SELECT * FROM routines WHERE userid = '5'");
+$statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$routineid = $row['routineid'];
@@ -104,6 +106,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	}
 	echo "</ul>";
 }
+$statement = $db->prepare("SELECT * FROM routines WHERE userid = '5'");
+$statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$routineid = $row['routineid'];
