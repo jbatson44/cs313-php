@@ -20,8 +20,7 @@ $statement->execute();
 <html>
 	<head>
 <?php
-$statement = $db->prepare("SELECT * FROM users WHERE username='Kaela'");
-$statement->execute();
+
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$userid = $row['userid'];
@@ -35,6 +34,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	</head>
 	<body>
 <?php
+$statement = $db->prepare("SELECT * FROM users WHERE username='Kaela'");
+$statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
