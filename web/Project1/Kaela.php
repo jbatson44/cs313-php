@@ -19,6 +19,7 @@ $statement->execute();
 <!DOCTYPE html>
 <html>
 	<head>
+	<link rel="stylesheet" href="projectStyle.css">
 <?php
 
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -59,7 +60,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
 $statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
 $statement->execute();
-echo "<ul>";
+echo "<ul class='routine'>";
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$exerciseid = $row['exerciseid'];

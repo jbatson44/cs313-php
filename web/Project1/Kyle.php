@@ -19,24 +19,56 @@ $statement->execute();
 <!DOCTYPE html>
 <html>
 	<head>
+	<link rel="stylesheet" href="projectStyle.css">
 <?php
+
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo "<title>User " . $row['username'] . "</title>";
+	$userid = $row['userid'];
+	$username = $row['username'];
+	$heightfeet = $row['heightfeet'];
+	$heightinch = $row['heightinch'];
+	$weight = $row['weight'];
+	echo "<title>User " . $username . "</title>";
 }
 ?>
 	</head>
 	<body>
 <?php
-$statement = $db->prepare("SELECT * FROM users WHERE username='Kyle'");
+//$statement = $db->prepare("SELECT * FROM users WHERE username='Kaela'");
+//$statement->execute();
+// Go through each result
+//while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+//{
+	echo "<h1>" . $username . "</h1>";	
+	echo "Height: " . $heightfeet . "'" . $heightinch . "\"<br>";
+	echo "Current weight: " . $weight . " lbs<br>";
+//}
+?>
+		<h2>Routines</h2>
+<?php
+
+$statement = $db->prepare("SELECT * FROM routines WHERE userid = '4'");
 $statement->execute();
 // Go through each result
+
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	echo "<h1>" . $row['username'] . "</h1>";
-	echo "Height: " . $row['heightfeet'] . "'" . $row['heightinch'] . "\"<br>";
-	echo "Current weight: " . $row['weight'] . " lbs<br>";
+	$routineid = $row['routineid'];
+	$routine = $row['routine'];
+	echo "<h3>" . $routine . "</h3>";
 }
+$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
+$statement->execute();
+echo "<ul class='routine'>";
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+	$exerciseid = $row['exerciseid'];
+	$exercise = $row['exercise'];
+	echo "<li>" . $exercise . "</li>"; 
+}
+echo "</ul>";
+
 ?>
 	</body>
 </html>

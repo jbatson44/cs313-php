@@ -17,6 +17,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 <html>
 	<head>
 		<title>FIT</title>
+		<link rel="stylesheet" href="projectStyle.css">
 	</head>
 	<body>
 		<h1>FIT</h1>
