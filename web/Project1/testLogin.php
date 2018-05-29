@@ -27,7 +27,7 @@ $statement->execute();
 
 while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
     if ($row['username'] == $user)
-		echo "Welcome " . $user);
+		echo "Welcome " . $user;
 }
 ?>
 		
