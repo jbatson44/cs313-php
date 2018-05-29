@@ -37,13 +37,13 @@ while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 	}
 }
 if ($userRight == false) {
-	echo "Username doesn't exist!";
-	echo "<a href='createAccount.php'>Create an new account</a>";
-	echo "<a href='login.php'>Retry login</a>";
+	echo "Username doesn't exist!<br>";
+	echo "<a href='createAccount.php'>Create an new account</a><br>";
+	echo "<a href='login.php'>Retry login</a><br>";
 }
-if ($passRight == false) {
-	echo "Incorrect password!";
-	echo "<a href='login.php'>Retry login</a>";
+else if ($passRight == false) {
+	echo "Incorrect password!<br>";
+	echo "<a href='login.php'>Retry login</a><br>";
 }
 ?>
 		
