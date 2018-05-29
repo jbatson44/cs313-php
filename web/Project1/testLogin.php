@@ -41,6 +41,10 @@ if ($userRight == false) {
 	echo "<a href='createAccount.php'>Create an new account</a>";
 	echo "<a href='login.php'>Retry login</a>";
 }
+if ($passRight == false) {
+	echo "Incorrect password!";
+	echo "<a href='login.php'>Retry login</a>";
+}
 ?>
 		
 	</body>
