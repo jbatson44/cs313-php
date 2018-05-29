@@ -16,17 +16,17 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Fit</title>
+		<title>Fit - Create Account</title>
 	</head>
 	<body>
-		<h1>Welcome to FIT</h1>
+		<h1>Create An Account</h1>
 		<div id="login">
 			<form action="testAccount.php" method="post">
 				Username: 
 				<input type="text" name="username"><br><br>
 				Password: 
 				<input type="text" name="password"><br><br>
-				<input type="submit" value="login"><br>
+				<input type="submit" value="Create account"><br>
 				<a href="login.php">Existing user</a>
 			</form>
 		</div>

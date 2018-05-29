@@ -16,7 +16,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Fit</title>
+		<title>Fit - Login</title>
 	</head>
 	<body>
 		<h1>Welcome to FIT</h1>
