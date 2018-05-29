@@ -19,16 +19,17 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		<title>Fit</title>
 	</head>
 	<body>
-		<h1>Welcome to FIT</h1>
-		<div id="login">
-			<form action="testLogin.php" method="post">
-				Username: 
-				<input type="text" name="username"><br><br>
-				Password: 
-				<input type="text" name="password"><br><br>
-				<input type="submit" value="login"><br>
-				<a href="createAccount.php">Create an account</a>
-			</form>
-		</div>
+<?php
+$user = $_POST['username'];
+$pass = $_POST['password'];
+$statement = $db->prepare("SELECT * FROM users");
+$statement->execute();
+
+while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+    if ($row['username'] == $user)
+		echo "Welcome " . $user);
+}
+?>
+		
 	</body>
 </html>
