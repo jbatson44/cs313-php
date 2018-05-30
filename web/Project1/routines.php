@@ -35,7 +35,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
 $routine = array();
 
-while($row = mysql_fetch_array($info)){
+while($row = $statement->fetch(PDO::FETCH_ASSOC)){
     $routine[] = $row['routine'];
 }
 ?>
