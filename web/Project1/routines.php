@@ -30,8 +30,13 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$heightinch = $row['heightinch'];
 	$weight = $row['weight'];
 	$routineid = $row['routineid'];
-	$routine = $row['routine'];
+	//$routine = $row['routine'];
 	echo "<title>User " . $username . "</title>";
+}
+$routine = array();
+
+while($row = mysql_fetch_array($info)){
+    $routine[] = $row['routine'];
 }
 ?>
 	</head>
@@ -56,8 +61,10 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 
 //while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 //{
+foreach ($routine as $value) {
+    echo "<h3>" . $value . "</h3>";
+}
 
-	echo "<h3>" . $routine . "</h3>";
 //}
 /*$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
 $statement->execute();
