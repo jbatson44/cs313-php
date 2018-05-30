@@ -62,6 +62,7 @@ $routine = array();
 
 //while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 //{
+echo $routineid;
 foreach ($routine as $value) {
     echo "<h3>" . $value . "</h3>";
 }
