@@ -12,7 +12,7 @@ $dbName = ltrim($dbopts["path"],'/');
 $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$username = "Jake";
+//$username = "Jake";
 $statement = $db->prepare("SELECT * FROM users INNER JOIN routines ON routines.userid=userid WHERE userid = '4'");
 $statement->execute();
 ?>
@@ -67,6 +67,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 //    echo "<h3>" . $value . "</h3>";
 //}
 for ($i = 0; $i < count($routine); $i++) {
+	echo $routine[$i];
 	echo $routine[$i];
 }
 echo "Works?";
