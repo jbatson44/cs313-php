@@ -13,7 +13,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //$username = "Jake";
-$statement = $db->prepare("SELECT * FROM users FULL OUTER JOIN routines ON routines.userid=userid WHERE userid = '4'");
+$statement = $db->prepare("SELECT * FROM users FULL OUTER JOIN routines ON routines.userid=userid WHERE userid = '5'");
 $statement->execute();
 ?>
 <!DOCTYPE html>
@@ -70,7 +70,6 @@ for ($i = 0; $i < count($routine); $i++) {
 	echo "<h3>" . $routine[$i] . "</h3>";
 	echo $routineid[$i];
 }
-echo "Works?";
 
 //}
 /*$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
