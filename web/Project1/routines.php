@@ -34,9 +34,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$routid[] = $row['routineid'];
 	
 	//$routine = $row['routine'];
-	$rout = array(
-	$row['routineid'] => $row['routine'];
-	);
+	$rout[$row['routineid'] = $row['routine']; 
 	echo "<title>User " . $username . "</title>";
 }
 $routine = array_unique($rout);
