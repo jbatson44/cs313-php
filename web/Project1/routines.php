@@ -31,14 +31,14 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$heightinch = $row['heightinch'];
 	$weight = $row['weight'];
 	
-	$routineid[] = $row['routineid'];
+	$routid[] = $row['routineid'];
 	
 	//$routine = $row['routine'];
-	$routine[] = $row['routine'];
+	$rout[] = $row['routine'];
 	echo "<title>User " . $username . "</title>";
 }
-array_unique($routineid);
-array_unique($routine);
+$routine = array_unique($rout);
+$routineid = array_unique($routid);
 
 //while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 //    $routine[] = $row['routine'];
