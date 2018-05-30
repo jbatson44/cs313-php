@@ -48,7 +48,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 		<h2>Routines</h2>
 <?php
 
-$statement = $db->prepare("SELECT * FROM routines WHERE userid = '4'");
+$statement = $db->prepare("SELECT * FROM routines WHERE userid = '" . $userid . "'");
 $statement->execute();
 // Go through each result
 
