@@ -66,6 +66,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 foreach ($routine as $value) {
     echo "<h3>" . $value . "</h3>";
 }
+echo "Works?";
 
 //}
 /*$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
