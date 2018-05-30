@@ -21,8 +21,8 @@ $statement->execute();
 	<head>
 	<link rel="stylesheet" href="projectStyle.css">
 <?php
-$routine = array();
-$routineid = array();
+$rout = array();
+$routid = array();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$userid = $row['userid'];
