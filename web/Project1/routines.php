@@ -67,8 +67,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 //    echo "<h3>" . $value . "</h3>";
 //}
 for ($i = 0; $i < count($routine); $i++) {
-	echo $routine[$i];
-	echo $routine[$i];
+	echo "<h3>" . $routine[$i] . "</h3>";
+	echo $routineid[$i];
 }
 echo "Works?";
 
