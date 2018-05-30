@@ -13,7 +13,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $username = "Jake";
-$statement = $db->prepare("SELECT * FROM users INNER JOIN routines ON routines.userid=userid WHERE userid = '5'");
+$statement = $db->prepare("SELECT * FROM users INNER JOIN routines ON routines.userid=userid WHERE userid = '4'");
 $statement->execute();
 ?>
 <!DOCTYPE html>
