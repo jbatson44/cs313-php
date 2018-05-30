@@ -13,7 +13,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $username = "Jake";
-$statement = $db->prepare("SELECT * FROM users WHERE username='" . $username . "'");
+$statement = $db->prepare("SELECT * FROM users INNER JOIN routines ON routines.userid=userid WHERE username='" . $username . "'");
 $statement->execute();
 ?>
 <!DOCTYPE html>
@@ -29,6 +29,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$heightfeet = $row['heightfeet'];
 	$heightinch = $row['heightinch'];
 	$weight = $row['weight'];
+	$routineid = $row['routineid'];
+	$routine = $row['routine'];
 	echo "<title>User " . $username . "</title>";
 }
 ?>
@@ -48,17 +50,16 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 		<h2>Routines</h2>
 <?php
 
-$statement = $db->prepare("SELECT * FROM routines WHERE userid = '" . $userid . "'");
-$statement->execute();
+//$statement = $db->prepare("SELECT * FROM routines WHERE userid = '" . $userid . "'");
+//$statement->execute();
 // Go through each result
 
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-	$routineid = $row['routineid'];
-	$routine = $row['routine'];
+//while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+//{
+
 	echo "<h3>" . $routine . "</h3>";
-}
-$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
+//}
+/*$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
 $statement->execute();
 echo "<ul class='routine'>";
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -68,7 +69,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	echo "<li>" . $exercise . "</li>"; 
 }
 echo "</ul>";
-
+*/
 ?>
 	</body>
 </html>
