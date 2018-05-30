@@ -69,9 +69,9 @@ $routineid = array_unique($routid);
 //foreach ($routine as $value) {
 //    echo "<h3>" . $value . "</h3>";
 //}
-for ($i = 0; $i < count($routine); $i++) {
-	echo "<h3>" . $routine[$i] . "</h3>";
-	echo $routineid[$i];
+foreach ($routine as $value) {
+	echo "<h3>" . $value . "</h3>";
+	//echo $routineid[$i];
 }
 
 //}
