@@ -21,7 +21,8 @@ $statement->execute();
 	<head>
 	<link rel="stylesheet" href="projectStyle.css">
 <?php
-
+$routine = array();
+$routineid = array();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$userid = $row['userid'];
@@ -29,12 +30,12 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$heightfeet = $row['heightfeet'];
 	$heightinch = $row['heightinch'];
 	$weight = $row['weight'];
-	$routineid = $row['routineid'];
+	$routineid[] = $row['routineid'];
 	//$routine = $row['routine'];
 	$routine[] = $row['routine'];
 	echo "<title>User " . $username . "</title>";
 }
-$routine = array();
+
 
 //while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 //    $routine[] = $row['routine'];
