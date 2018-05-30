@@ -34,7 +34,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$routid[] = $row['routineid'];
 	
 	//$routine = $row['routine'];
-	$rout[$row['routineid'] = $row['routine']; 
+	$rout[$row[] = $row['routine']; 
 	echo "<title>User " . $username . "</title>";
 }
 $routine = array_unique($rout);
@@ -69,8 +69,8 @@ $routineid = array_unique($routid);
 //foreach ($routine as $value) {
 //    echo "<h3>" . $value . "</h3>";
 //}
-foreach ($routine as $key => $value) {
-	echo "<h3>" . $key . $value . "</h3>";
+foreach ($routine as $value) {
+	echo "<h3>" . $value . "</h3>";
 
 }
 
