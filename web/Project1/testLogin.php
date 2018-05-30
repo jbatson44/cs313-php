@@ -31,7 +31,7 @@ while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 		$userRight = true;
 		if ($userRight || row['password'] == $pass) {
 			$passRight = true;
-			header("location: https://glacial-meadow-56606.herokuapp.com/Project1/" . $user . ".php");  
+			header("location: https://glacial-meadow-56606.herokuapp.com/Project1/routines.php");  
 			exit(); 
 		}
 	}
