@@ -67,12 +67,13 @@ $routReal = array_combine($routineid, $routine);
 //SQL;
 //$statement = $pdo->prepare($select);
 //$statement->execute($routineid);
-$statement = $db->prepare("SELECT * FROM exercises WHERE routineid IN ('" . $routineid ."')");
+$statement = $db->prepare("SELECT * FROM exercises");
 $statement->execute();
 
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-	echo $row['exercise'];
+	if (row['routineid'] == 2)
+		echo $row['exercise'];
 }
 //while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 //{
