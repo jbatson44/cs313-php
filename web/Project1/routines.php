@@ -59,8 +59,16 @@ $routReal = array_combine($routineid, $routine);
 ?>
 		<h2>Routines</h2>
 <?php
-$statement = $db->prepare("SELECT * FROM exercises WHERE routineid IN '" . $routineid ."'");
-$statement->execute();
+$in = join(',', array_fill(0, count($routineid), '?'));
+$select = <<<SQL
+    SELECT *
+    FROM exercises
+    WHERE id IN ($in);
+SQL;
+$statement = $pdo->prepare($select);
+$statement->execute($routineid);
+//$statement = $db->prepare("SELECT * FROM exercises WHERE routineid IN '" . $routineid ."'");
+//$statement->execute();
 //$statement = $db->prepare("SELECT * FROM routines WHERE userid = '" . $userid . "'");
 //$statement->execute();
 // Go through each result
