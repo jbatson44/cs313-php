@@ -22,6 +22,9 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 <?php
 $user = $_POST['username'];
 $pass = $_POST['password'];
+$heightfeet = $_POST['heightfeet'];
+$heightinch = $_POST['heightinch'];
+$weight = $_POST['weight'];
 $statement = $db->prepare("SELECT * FROM users");
 $statement->execute();
 $userExists = false;
