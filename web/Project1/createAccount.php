@@ -49,9 +49,9 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 					<option value="9">9</option>
 					<option value="10">10</option>
 					<option value="11">11</option>
-				</select><br>
+				</select><br><br>
 				Weight:
-				<input type="number" step="any" min="0" name="weight"/><br>
+				<input type="number" step="any" min="0" name="weight"/><br><br>
 				<input type="submit" value="Create account"><br>
 				<a href="login.php">Existing user</a>
 			</form>
