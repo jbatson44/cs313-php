@@ -39,7 +39,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
 $routine = array_unique($rout);
 $routineid = array_unique($routid);
-
+$routReal = array_combine($routineid, $routine);
 //while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 //    $routine[] = $row['routine'];
 //}
@@ -76,7 +76,9 @@ foreach ($routine as $value) {
 foreach ($routineid as $value) {
 	echo $value;
 }
-
+foreach ($routReal as $key => $value) {
+	echo "<h3>" . $key . " " . $value . "</h3>";
+}
 //}
 /*$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
 $statement->execute();
