@@ -73,6 +73,9 @@ foreach ($routine as $value) {
 	echo "<h3>" . $value . "</h3>";
 
 }
+foreach ($routineid as $value) {
+	echo $value;
+}
 
 //}
 /*$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
