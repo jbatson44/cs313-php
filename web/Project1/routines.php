@@ -72,7 +72,7 @@ $statement->execute();
 
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-	if (row['routineid'] == 2)
+	//if (row['routineid'] == 2)
 		echo $row['exercise'];
 }
 //while ($row = $statement->fetch(PDO::FETCH_ASSOC))
