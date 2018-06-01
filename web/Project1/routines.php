@@ -23,12 +23,6 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	</head>
 	<body>
 <?php
-$statement = $db->prepare("SELECT * FROM users WHERE username = '" . $username . "'");
-$statement->execute();
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-	echo $row['userid'];
-}
 $statement = $db->prepare("SELECT * FROM users FULL OUTER JOIN routines ON routines.userid=userid WHERE userid = '5'");
 $statement->execute();
 $routine = array();
