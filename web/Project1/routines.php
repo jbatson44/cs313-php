@@ -28,18 +28,19 @@ $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$userid = $row['userid'];
+	$username = $row['username'];
+	$heightfeet = $row['heightfeet'];
+	$heightinch = $row['heightinch'];
+	$weight = $row['weight'];
 }
-//$statement = $db->prepare("SELECT * FROM users FULL OUTER JOIN routines ON routines.userid=userid WHERE userid = '5'");
-//$statement->execute();
+$statement = $db->prepare("SELECT * FROM users FULL OUTER JOIN routines ON routines.userid=userid WHERE userid = '5'");
+$statement->execute();
 $routine = array();
 $routineid = array();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	//$userid = $row['userid'];
-	$username = $row['username'];
-	$heightfeet = $row['heightfeet'];
-	$heightinch = $row['heightinch'];
-	$weight = $row['weight'];
+	
 	
 	$routid[] = $row['routineid'];
 	
