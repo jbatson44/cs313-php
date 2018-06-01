@@ -13,7 +13,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //$username = "Jake";
-$statement = $db->prepare("SELECT * FROM users WHERE username = '" . $username . "'")
+$statement = $db->prepare("SELECT * FROM users WHERE username = '" . $username . "'");
 $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
