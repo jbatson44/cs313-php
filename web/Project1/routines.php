@@ -62,7 +62,7 @@ $routReal = array_combine($routineid, $routine);
 //while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 //{
 	echo $_SESSION['user'];
-	echo "<h1>" . $username . "</h1>";	
+	echo "<h1>" . $_SESSION['user'] . "</h1>";	
 	echo "Height: " . $heightfeet . "'" . $heightinch . "\"<br>";
 	echo "Current weight: " . $weight . " lbs<br>";
 	echo $userid;
