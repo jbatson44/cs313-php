@@ -41,6 +41,7 @@ while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 }
 if ($userRight == false) {
 	echo "Username doesn't exist!<br>";
+	echo $_SESSION['user'] . "<br>";
 	echo "<a href='createAccount.php'>Create an new account</a><br>";
 	echo "<a href='login.php'>Retry login</a><br>";
 }
