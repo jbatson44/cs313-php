@@ -52,7 +52,7 @@ $routineid = array_unique($routid);
 $routReal = array_combine($routineid, $routine);
 
 
-
+	echo $_SESSION['user'];
 	echo "<h1>" . $username . "</h1>";	
 	echo "Height: " . $heightfeet . "'" . $heightinch . "\"<br>";
 	echo "Current weight: " . $weight . " lbs<br>";
