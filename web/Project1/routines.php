@@ -12,6 +12,8 @@ $dbName = ltrim($dbopts["path"],'/');
 $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+session_start();
 //$username = "Jake";
 $statement = $db->prepare("SELECT * FROM users WHERE username = '" . $username . "'");
 $statement->execute();
