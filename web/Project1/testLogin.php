@@ -20,14 +20,14 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	</head>
 	<body>
 <?php
-$user = $_POST['username'];
+$_SESSION['user'] = $_POST['username'];
 $pass = $_POST['password'];
 $statement = $db->prepare("SELECT * FROM users");
 $statement->execute();
 $userRight = false;
 $passRight = false;
 while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-    if ($row['username'] == $user) {
+    if ($row['username'] == $_SESSION['user']) {
 		$userRight = true;
 		if ($userRight || row['password'] == $pass) {
 			$passRight = true;
