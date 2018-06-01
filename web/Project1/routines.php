@@ -61,6 +61,7 @@ $routReal = array_combine($routineid, $routine);
 	echo "<h1>" . $username . "</h1>";	
 	echo "Height: " . $heightfeet . "'" . $heightinch . "\"<br>";
 	echo "Current weight: " . $weight . " lbs<br>";
+	echo $userid;
 //}
 ?>
 		<h2>Routines</h2>
