@@ -15,7 +15,14 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-//$username = "Jake";
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="projectStyle.css">
+	</head>
+	<body>
+<?php
 $statement = $db->prepare("SELECT * FROM users WHERE username = '" . $username . "'");
 $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -24,12 +31,6 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
 $statement = $db->prepare("SELECT * FROM users FULL OUTER JOIN routines ON routines.userid=userid WHERE userid = '5'");
 $statement->execute();
-?>
-<!DOCTYPE html>
-<html>
-	<head>
-	<link rel="stylesheet" href="projectStyle.css">
-<?php
 $routine = array();
 $routineid = array();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -42,31 +43,19 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	
 	$routid[] = $row['routineid'];
 	
-	//$routine = $row['routine'];
 	$rout[] = $row['routine']; 
 }
 echo "<title>User " . $username . "</title>";
 $routine = array_unique($rout);
 $routineid = array_unique($routid);
 $routReal = array_combine($routineid, $routine);
-//while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-//    $routine[] = $row['routine'];
-//}
-?>
-	</head>
-	<body>
-<?php
-//$statement = $db->prepare("SELECT * FROM users WHERE username='Kaela'");
-//$statement->execute();
-// Go through each result
-//while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-//{
-	echo $_SESSION['user'];
-	echo "<h1>" . $_SESSION['user'] . "</h1>";	
+
+
+
+	echo "<h1>" . $username . "</h1>";	
 	echo "Height: " . $heightfeet . "'" . $heightinch . "\"<br>";
 	echo "Current weight: " . $weight . " lbs<br>";
 	echo $userid;
-//}
 ?>
 		<h2>Routines</h2>
 <?php
