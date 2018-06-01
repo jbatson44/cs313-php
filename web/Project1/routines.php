@@ -1,4 +1,5 @@
 <?php
+//session_start();
 $dbUrl = getenv('DATABASE_URL');
 
 $dbopts = parse_url($dbUrl);
@@ -13,7 +14,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-session_start();
+
 //$username = "Jake";
 $statement = $db->prepare("SELECT * FROM users WHERE username = '" . $username . "'");
 $statement->execute();
