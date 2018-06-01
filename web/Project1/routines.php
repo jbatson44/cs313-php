@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 $dbUrl = getenv('DATABASE_URL');
 
 $dbopts = parse_url($dbUrl);
