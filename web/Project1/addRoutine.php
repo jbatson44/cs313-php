@@ -14,10 +14,11 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $newRoutine = $_POST['newRoutine'];
-$query = 'INSERT INTO routines(routine) VALUES(:routine)';
+$query = 'INSERT INTO routines(routine, userid) VALUES(:routine, :userid)';
 $statement = $db->prepare($query);
 	
-$statement->bindValue(':username', $newRoutine);
+$statement->bindValue(':routine', $newRoutine);
+$statement->bindValue(':userid', $_SESSION['userid']);
 header("location: https://glacial-meadow-56606.herokuapp.com/Project1/routines.php");  
 exit();
 ?>
