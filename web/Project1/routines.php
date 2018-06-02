@@ -96,6 +96,9 @@ $exReal = array_combine($exRoutid, $exercises);
 //foreach ($routine as $value) {
 //    echo "<h3>" . $value . "</h3>";
 //}
+	foreach ($exReal as $exkey => $exvalue) {
+		echo $exvalue . " " . $exkey;
+	}
 ?>
 <input type="button" name="edit" value="+" onclick="editRoutines()"/>
 <?php
