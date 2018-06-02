@@ -101,6 +101,7 @@ $exReal = array_combine($exercises, $exRoutid);
 ?>
 <input type="button" name="edit" value="+" onclick="editRoutines()"/>
 <?php
+/*
 foreach ($routReal as $key => $value) {
 	echo "<h3>" . $value . "</h3>";
 	echo "<ul>";
@@ -110,7 +111,7 @@ foreach ($routReal as $key => $value) {
 	}
 	echo "</ul>";
 }
-
+*/
 $newArray = array();
 for ($i = 0; $i < count($exercises); $i++) {
 	$newArray[$i] = array($exercises[$i], $exid[$i], $exRoutid[$i]);
