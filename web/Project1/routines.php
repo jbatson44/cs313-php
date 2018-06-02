@@ -126,6 +126,7 @@ foreach ($routReal as $key => $value) {
 	}
 	echo "</ul>";
 	echo "<form method='post' action='deleteRoutine.php'>";
+	echo "<input type='text' value='$key' name='deleteRoutid' style='display:none'>"
 	echo "<input type='submit' value='Delete Routine' name='deleteRoutine'>";// style='visibility:hidden'>"
 	echo "</form>";
 }
