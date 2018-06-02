@@ -90,7 +90,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 }
 //$routine = array_unique($rout);
 //$routineid = array_unique($routid);
-$exReal = array_combine($exRoutid, $exercises);
+$exReal = array_combine($exercises, $exRoutid);
 //while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 //{
 //foreach ($routine as $value) {
