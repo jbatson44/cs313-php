@@ -30,8 +30,8 @@ $statement = $db->prepare("SELECT * FROM users WHERE username = '{$_SESSION['use
 $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-	$_SESSION['userid'] = $row['userid'];
-	echo $row['userid'];
+	$_SESSION['userid'] = $row['id'];
+	//echo $row['userid'];
 	//$username = $row['username'];
 	$_SESSION['heightfeet'] = $row['heightfeet'];
 	$_SESSION['heightinch'] = $row['heightinch'];
