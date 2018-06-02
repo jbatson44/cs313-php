@@ -101,7 +101,7 @@ foreach ($routine as $value) {
 ?>
 <form method="post" action="addRoutine.php">
 	<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
-	<input type="submit" value="Add Routine">
+	<input type="submit" value="Add Routine" name="submitRoutine" style="visibility:hidden">
 </form>
 <?php
 //foreach ($routineid as $value) {
