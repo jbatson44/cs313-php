@@ -31,6 +31,7 @@ $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$_SESSION['userid'] = $row['userid'];
+	echo $row['userid'];
 	//$username = $row['username'];
 	$_SESSION['heightfeet'] = $row['heightfeet'];
 	$_SESSION['heightinch'] = $row['heightinch'];
@@ -52,7 +53,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	
 	$rout[] = $row['routine']; 
 }
-echo "<title>User " . $username . "</title>";
+//echo "<title>User " . $username . "</title>";
 $routine = array_unique($rout);
 $routineid = array_unique($routid);
 $routReal = array_combine($routineid, $routine);
