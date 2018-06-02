@@ -14,6 +14,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $newRoutine = $_POST['newRoutine'];
+echo $_SESSION['userid'];
 try {
 	$query = 'INSERT INTO routines(routine, userid) VALUES(:routine, :userid)';
 	$statement = $db->prepare($query);
