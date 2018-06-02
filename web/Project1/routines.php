@@ -98,6 +98,7 @@ foreach ($routine as $value) {
 	echo "<h3>" . $value . "</h3>";
 
 }
+session_write_close();
 ?>
 <form method="post" action="addRoutine.php">
 	<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
