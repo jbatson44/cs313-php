@@ -111,12 +111,11 @@ foreach ($routReal as $key => $value) {
 	echo "</ul>";
 }
 
-$newArray = array
-(
+$newArray = array();
 for ($i = 0; $i < count($exercises); $i++) {
-	array($exercises[$i], $exid, $exRoutid);
+	$newArray[$i] = array($exercises[$i], $exid, $exRoutid);
 }
-);
+
 
 echo $newArray[0][0];
 echo $newArray[0][1];
