@@ -28,7 +28,7 @@ $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	$userid = $row['userid'];
-	
+	echo $userid;
 }
 $statement = $db->prepare("SELECT * FROM users FULL OUTER JOIN routines ON routines.userid=userid WHERE userid = '5'");
 $statement->execute();
@@ -85,12 +85,12 @@ foreach ($routine as $value) {
 	echo "<h3>" . $value . "</h3>";
 
 }
-foreach ($routineid as $value) {
-	echo $value;
-}
-foreach ($routReal as $key => $value) {
-	echo "<h3>" . $key . " " . $value . "</h3>";
-}
+//foreach ($routineid as $value) {
+//	echo $value;
+//}
+//foreach ($routReal as $key => $value) {
+//	echo "<h3>" . $key . " " . $value . "</h3>";
+//}
 //}
 /*$statement = $db->prepare("SELECT * FROM exercises WHERE routineid='1'");
 $statement->execute();
