@@ -80,12 +80,17 @@ $routReal = array_combine($routineid, $routine);
 //$statement->execute($routineid);
 $statement = $db->prepare("SELECT * FROM exercises");
 $statement->execute();
-
+$exercises = array();
+$exRoutid = array();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 	//if (row['routineid'] == '2')
-		echo $row['exercise'];
+		$exercises[] = $row['exercise'];
+		$exRoutid[] = $row['routineid'];
 }
+//$routine = array_unique($rout);
+//$routineid = array_unique($routid);
+$exReal = array_combine($exRoutid, $exercises);
 //while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 //{
 //foreach ($routine as $value) {
@@ -94,7 +99,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 ?>
 <input type="button" name="edit" value="+" onclick="editRoutines()"/>
 <?php
-foreach ($routine as $value) {
+foreach ($routine as $key => $value) {
 	echo "<h3>" . $value . "</h3>";
 
 }
