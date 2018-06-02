@@ -105,8 +105,8 @@ $exReal = array_combine($exercises, $exRoutid);
 foreach ($routReal as $key => $value) {
 	echo "<h3>" . $value . "</h3>";
 	foreach ($exReal as $exkey => $exvalue) {
-		if ($key == $exkey)
-			echo $exvalue;
+		if ($key == $exvalue)
+			echo $exkey;
 	}
 }
 session_write_close();
