@@ -23,7 +23,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	</head>
 	<body>
 <?php
-$statement = $db->prepare("SELECT * FROM users WHERE username = '$_SESSION['user']'");
+$statement = $db->prepare("SELECT * FROM users WHERE username = '{$_SESSION['user']}'");
 $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
