@@ -101,7 +101,10 @@ $exReal = array_combine($exRoutid, $exercises);
 <?php
 foreach ($routine as $key => $value) {
 	echo "<h3>" . $value . "</h3>";
-
+	for ($i = 0; $i < count($exReal); $i++) {
+		if ($key == $exReal[$i])
+			echo $exReal[$i];
+	}
 }
 session_write_close();
 ?>
