@@ -116,11 +116,15 @@ for ($i = 0; $i < count($exercises); $i++) {
 	$newArray[$i] = array($exercises[$i], $exid[$i], $exRoutid[$i]);
 }
 
+foreach ($routReal as $key => $value) {
+	echo "<h3>" . $value . "</h3>";
+	echo "<ul>";
+	for ($i = 0; $i < count($newArray); $i++) {
+		if ($key == $newArray[$i][2])
+			echo "<li>" . $newArray[$i][0] . "</li>";
+	}
+}
 
-echo $newArray[0][0];
-echo $newArray[0][1];
-echo $newArray[0][2];
-echo $newArray[0][3];
 session_write_close();
 ?>
 <form method="post" action="addRoutine.php">
