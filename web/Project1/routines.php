@@ -20,6 +20,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 <html>
 	<head>
 	<link rel="stylesheet" href="projectStyle.css">
+	<script src="fitscript.js"></script>
 <?php
 echo "<title>User " . $_SESSION['user'] . "</title>";
 ?>
@@ -91,7 +92,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 //    echo "<h3>" . $value . "</h3>";
 //}
 ?>
-<input type="button" name="edit" onclick="editRoutines()">+</button>
+<input type="button" name="edit" value="+" onclick="editRoutines()"/>
 <?php
 foreach ($routine as $value) {
 	echo "<h3>" . $value . "</h3>";
