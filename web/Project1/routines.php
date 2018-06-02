@@ -123,6 +123,7 @@ foreach ($routReal as $key => $value) {
 		if ($key == $newArray[$i][2])
 			echo "<li>" . $newArray[$i][0] . "</li>";
 	}
+	echo "</ul>";
 }
 
 session_write_close();
