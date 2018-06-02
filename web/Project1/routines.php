@@ -105,7 +105,7 @@ foreach ($routReal as $key => $value) {
 	echo "<ul>";
 	foreach ($exReal as $exkey => $exvalue) {
 		if ($key == $exvalue)
-			echo "<li>" . $exkey "</li>";
+			echo "<li>" . $exkey . "</li>";
 	}
 	echo "</ul>";
 }
