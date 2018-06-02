@@ -87,6 +87,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 	//if (row['routineid'] == '2')
 		$exercises[] = $row['exercise'];
 		$exRoutid[] = $row['routineid'];
+		$exid[] = $row['routineid'];
 }
 //$routine = array_unique($rout);
 //$routineid = array_unique($routid);
@@ -109,6 +110,18 @@ foreach ($routReal as $key => $value) {
 	}
 	echo "</ul>";
 }
+
+$newArray = array
+(
+for ($i = 0; $i < count($exercises); $i++) {
+	array($exercises[$i], $exid, $exRoutid);
+}
+);
+
+echo $newArray[0][0];
+echo $newArray[0][1];
+echo $newArray[0][2];
+echo $newArray[0][3];
 session_write_close();
 ?>
 <form method="post" action="addRoutine.php">
