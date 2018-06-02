@@ -23,7 +23,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	<body>
 <?php
 $user = $_POST['username'];
-$_SESSION['user'] = $user;
+$_SESSION['user'] = "dumb";//$user;
 $pass = $_POST['password'];
 $statement = $db->prepare("SELECT * FROM users");
 $statement->execute();
@@ -35,6 +35,7 @@ while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 		if ($userRight || row['password'] == $pass) {
 			$passRight = true;
 			header("location: https://glacial-meadow-56606.herokuapp.com/Project1/routines.php");  
+			//die();
 			exit(); 
 		}
 	}
