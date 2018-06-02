@@ -98,6 +98,9 @@ foreach ($routine as $value) {
 	echo "<h3>" . $value . "</h3>";
 
 }
+?>
+<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
+<?php
 //foreach ($routineid as $value) {
 //	echo $value;
 //}
