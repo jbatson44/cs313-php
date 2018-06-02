@@ -20,6 +20,9 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 <html>
 	<head>
 	<link rel="stylesheet" href="projectStyle.css">
+<?php
+echo "<title>User " . $_SESSION['user'] . "</title>";
+?>
 	</head>
 	<body>
 <?php
