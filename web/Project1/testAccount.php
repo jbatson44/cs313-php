@@ -44,8 +44,7 @@ else {
 	{
 		$query = 'INSERT INTO users(username, password, heightfeet, heightinch, weight) VALUES(:username, :password, :heightfeet, :heightinch, :weight)';
 		$statement = $db->prepare($query);
-		// Now we bind the values to the placeholders. This does some nice things
-		// including sanitizing the input with regard to sql commands.
+	
 		$statement->bindValue(':username', $user);
 		$statement->bindValue(':password', $pass);
 		$statement->bindValue(':heightfeet', $heightfeet);

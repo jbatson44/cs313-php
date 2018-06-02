@@ -99,7 +99,10 @@ foreach ($routine as $value) {
 
 }
 ?>
-<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
+<form method="post" action="addRoutine.php">
+	<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
+	<input type="submit" value="Add Routine" name="submitRoutine>
+</form>
 <?php
 //foreach ($routineid as $value) {
 //	echo $value;
