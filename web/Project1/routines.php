@@ -99,11 +99,11 @@ $exReal = array_combine($exRoutid, $exercises);
 ?>
 <input type="button" name="edit" value="+" onclick="editRoutines()"/>
 <?php
-foreach ($routine as $key => $value) {
+foreach ($routReal as $key => $value) {
 	echo "<h3>" . $value . "</h3>";
-	for ($i = 0; $i < count($exReal); $i++) {
-		if ($key == $exReal[$i])
-			echo $exReal[$i];
+	foreach ($exReal as $exkey => $exvalue) {
+		if ($key == $exkey)
+			echo $exvalue;
 	}
 }
 session_write_close();
