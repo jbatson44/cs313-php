@@ -90,6 +90,9 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 //foreach ($routine as $value) {
 //    echo "<h3>" . $value . "</h3>";
 //}
+?>
+<input type="button" name="edit" value="+" onclick="editRoutines()"/>
+<?php
 foreach ($routine as $value) {
 	echo "<h3>" . $value . "</h3>";
 
