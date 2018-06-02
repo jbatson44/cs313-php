@@ -113,7 +113,7 @@ foreach ($routReal as $key => $value) {
 
 $newArray = array();
 for ($i = 0; $i < count($exercises); $i++) {
-	$newArray[$i] = array($exercises[$i], $exid, $exRoutid);
+	$newArray[$i] = array($exercises[$i], $exid[$i], $exRoutid[$i]);
 }
 
 
