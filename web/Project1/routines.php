@@ -37,7 +37,9 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$_SESSION['heightinch'] = $row['heightinch'];
 	$_SESSION['weight'] = $row['weight'];
 }
-$statement = $db->prepare("SELECT * FROM users FULL OUTER JOIN routines ON routines.userid=userid WHERE userid = '5'");
+//$statement = $db->prepare("SELECT * FROM users FULL OUTER JOIN routines ON routines.userid=userid WHERE userid = '5'");
+//$statement->execute();
+$statement = $db->prepare("SELECT * FROM routines WHERE userid = '{$_SESSION['userid']}'");
 $statement->execute();
 $routine = array();
 $routineid = array();
@@ -63,7 +65,7 @@ $routReal = array_combine($routineid, $routine);
 	echo "<h1>" . $_SESSION['user'] . "</h1>";	
 	echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
 	echo "Current weight: " . $_SESSION['weight'] . " lbs<br>";
-	echo "Userid: " . $_SESSION['userid'];
+	//echo "Userid: " . $_SESSION['userid'];
 ?>
 		<h2>Routines</h2>
 <?php
