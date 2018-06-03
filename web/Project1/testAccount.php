@@ -1,4 +1,5 @@
 <?php
+session_start();
 $dbUrl = getenv('DATABASE_URL');
 
 $dbopts = parse_url($dbUrl);
@@ -31,7 +32,7 @@ $statement->execute();
 $userExists = false;
 
 while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-    if ($row['username'] == $user) {
+    if ($row['username'] == $_SESSION['user']) {
 		$userExists = true;
 	}
 }
