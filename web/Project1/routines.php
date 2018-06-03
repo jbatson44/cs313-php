@@ -99,7 +99,8 @@ $exReal = array_combine($exercises, $exRoutid);
 //}
 
 ?>
-<input type="button" name="edit" value="+" onclick="editRoutines()"/>
+<input type="button" name="edit" value="+" onclick="addRoutines()"/>
+<input type="button" name="edit" value="-" onclick="deleteRoutines()"/>
 <?php
 /*
 foreach ($routReal as $key => $value) {
@@ -127,7 +128,7 @@ foreach ($routReal as $key => $value) {
 	echo "</ul>";
 	echo "<form method='post' action='deleteRoutine.php'>";
 	echo "<input type='text' value='" . $key . "' name='deleteRoutid' style='display:none'>";
-	echo "<input type='submit' value='Delete Routine' name='deleteRoutine'>";// style='visibility:hidden'>"
+	echo "<input type='submit' class='deletions' value='Delete Routine' name='deleteRoutine'>";// style='visibility:hidden'>"
 	echo "</form>";
 }
 
