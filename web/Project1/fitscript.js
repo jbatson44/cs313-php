@@ -11,12 +11,14 @@ function addRoutines() {
 }
 
 function deleteRoutines() {
-	if (document.getElementsByClassName('deletions').style.display == 'none') {
-		console.log("show delete!");
-		document.getElementsByClassName('deletions').style.display = 'block';
-		
-	} else {//if(document.getElementsByName("newRoutine")[0].style.visibility == 'visible') {
-		console.log("hide delete!");
-		document.getElementsByClassName('deletions').style.display = 'none';
+	var elems = document.getElementsByClassName('deletions');
+	for (var i = 0; i < elems.length; i++) {
+		if (elems[i].style.display == 'none') {
+			console.log("show delete!");
+			elems[i].style.display = 'block';
+		} else {
+			console.log("hide delete!");
+			elems[i].style.display = 'none';
+		}
 	}
 }
