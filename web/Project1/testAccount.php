@@ -21,6 +21,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	<body>
 <?php
 $user = $_POST['username'];
+$_SESSION['user'] = $user;
 $pass = $_POST['password'];
 $heightfeet = $_POST['heightfeet'];
 $heightinch = $_POST['heightinch'];
