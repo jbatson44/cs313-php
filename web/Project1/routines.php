@@ -135,8 +135,8 @@ foreach ($routReal as $key => $value) {
 session_write_close();
 ?>
 <form method="post" action="addRoutine.php">
-	<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
-	<input type="submit" value="Add Routine" name="submitRoutine" style="visibility:hidden">
+	<input type="text" class="edits" name="newRoutine" style="display:none">
+	<input type="submit" value="Add Routine" name="submitRoutine" style="display:none">
 </form>
 <?php
 //foreach ($routineid as $value) {
