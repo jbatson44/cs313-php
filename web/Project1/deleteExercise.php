@@ -14,7 +14,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$delExercise = $_POST['deleteExid'];
+$delExercise = $_POST['deleteExid[]'];
 
 try {
 $query = "DELETE FROM exercises WHERE exerciseid = :id";
