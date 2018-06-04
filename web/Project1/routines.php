@@ -120,15 +120,17 @@ for ($i = 0; $i < count($exercises); $i++) {
 
 foreach ($routReal as $key => $value) {
 	echo "<h3>" . $value . "</h3>";
-	echo "<ul>";
+	//echo "<ul>";
+	echo "<table>";
 	for ($i = 0; $i < count($newArray); $i++) {
 		if ($key == $newArray[$i][2])
-			echo "<li>" . $newArray[$i][0] . "<form method='post' action='deleteExercise.php'>
+			echo "<tr><td>" . $newArray[$i][0] . "</td><td><form method='post' action='deleteExercise.php'>
 	 <input type='text' value='" . $newArray[$i][1] . "' name='deleteExid' style='display:none'>
 	 <input type='submit' class='deletions' value='Delete Exercise' name='deleteExercise' onclick='deleteRoutines()'>
-	 </form>" . "</li>";
+	 </form></td>" . "</tr>";
 	}
-	echo "</ul>";
+	//echo "</ul>";
+	echo "</table>";
 	
 	echo "<form method='post' action='deleteRoutine.php'>";
 	echo "<input type='text' value='" . $key . "' name='deleteRoutid' style='display:none'>";
