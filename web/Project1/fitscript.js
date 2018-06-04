@@ -1,5 +1,5 @@
 function addRoutines() {
-	if (document.getElementsByName("newRoutine")[0].style.display == 'none') {
+	if (document.getElementsByClassName("edits")[0].style.display == 'none') {
 		console.log("show add!");
 		document.getElementsByName("newRoutine")[0].style.display = 'block';
 		document.getElementsByName("submitRoutine")[0].style.display = 'block';
