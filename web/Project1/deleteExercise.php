@@ -17,7 +17,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $delExercise = $_POST['deleteExid'];
 
 try {
-$query = "DELETE FROM exercise WHERE exerciseid = :id";
+$query = "DELETE FROM exercises WHERE exerciseid = :id";
 	$statement = $db->prepare($query);
 	
 	$statement->bindValue(':id', $delExercise);
