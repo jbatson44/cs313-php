@@ -123,9 +123,13 @@ foreach ($routReal as $key => $value) {
 	echo "<ul>";
 	for ($i = 0; $i < count($newArray); $i++) {
 		if ($key == $newArray[$i][2])
-			echo "<li>" . $newArray[$i][0] . "</li>";
+			echo "<li>" . $newArray[$i][0] . "<form method='post' action='deleteExercise.php'>
+	 <input type='text' value='" . $newArray[$i][1] . "' name='deleteExid' style='display:none'>
+	 <input type='submit' class='deletions' value='Delete Exercise' name='deleteExercise' onclick='deleteRoutines()'>
+	 </form>" . "</li>";
 	}
 	echo "</ul>";
+	
 	echo "<form method='post' action='deleteRoutine.php'>";
 	echo "<input type='text' value='" . $key . "' name='deleteRoutid' style='display:none'>";
 	echo "<input type='submit' class='deletions' value='Delete Routine' name='deleteRoutine' onclick='deleteRoutines()'>";// style='visibility:hidden'>"
