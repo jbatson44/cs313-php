@@ -1,12 +1,12 @@
 function addRoutines() {
-	if (document.getElementsByClassName("edits")[0].style.display == 'none') {
+	if (document.getElementsByName("newRoutine")[0].style.visibility == 'hidden') {
 		console.log("show add!");
-		document.getElementsByName("newRoutine")[0].style.display = 'block';
-		document.getElementsByName("submitRoutine")[0].style.display = 'block';
+		document.getElementsByName("newRoutine")[0].style.visibility = 'visible';
+		document.getElementsByName("submitRoutine")[0].style.visibility = 'visible';
 	} else {//if(document.getElementsByName("newRoutine")[0].style.visibility == 'visible') {
 		console.log("hide add!");
-		document.getElementsByName("newRoutine")[0].style.display = 'none';
-		document.getElementsByName("submitRoutine")[0].style.display = 'none';
+		document.getElementsByName("newRoutine")[0].style.visibility = 'hidden';
+		document.getElementsByName("submitRoutine")[0].style.visibility = 'hidden';
 	}
 }
 
