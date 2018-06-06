@@ -25,7 +25,7 @@ $user = $_POST['username'];
 $_SESSION['user'] = $user;
 $pass = $_POST['password'];
 
-$statement = $db->prepare("SELECT * FROM users");
+$statement = $db->prepare("SELECT * FROM users07");
 $statement->execute();
 $userExists = false;
 
