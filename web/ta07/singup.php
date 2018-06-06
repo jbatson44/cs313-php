@@ -21,7 +21,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	<body>
 		<h1>Create An Account</h1>
 		<div id="login">
-			<form action="testAccount.php" method="post">
+			<form action="testNewAccount.php" method="post">
 				Username: 
 				<input type="text" name="username"><br><br>
 				Password: 
