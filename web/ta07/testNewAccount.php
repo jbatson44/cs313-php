@@ -42,7 +42,7 @@ if ($userExists == true) {
 else {
 	try
 	{
-		$passwordHash = password_hash($pass);
+		$passwordHash = password_hash($pass, PASSWORD_DEFAULT);
 		$query = 'INSERT INTO users07(username, password) VALUES(:username, :password)';
 		$statement = $db->prepare($query);
 	
@@ -50,7 +50,7 @@ else {
 		$statement->bindValue(':password', $passwordHash);
 		
 		$statement->execute();
-		header("location: https://glacial-meadow-56606.herokuapp.com/Project1/routines.php");  
+		header("location: https://glacial-meadow-56606.herokuapp.com/ta07/signin.php");  
 		exit(); 
 	}
 	catch (Exception $ex)
