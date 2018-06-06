@@ -1,5 +1,5 @@
 <?
-session_start;
+session_start();
 //if(isset($_SESSION['user'])) {
 	echo "Welcome" . $_SESSION['user'];
 //} else {
@@ -8,4 +8,3 @@ session_start;
 
 ?>
 
-Welcome
