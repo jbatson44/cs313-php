@@ -121,9 +121,9 @@ for ($i = 0; $i < count($exercises); $i++) {
 }
 
 foreach ($routReal as $key => $value) {
-	echo "<h3>" . $value . "</h3>";
+	echo "<div class='routine'><h3>" . $value . "</h3>";
 	//echo "<ul>";
-	echo "<table class='routine'>";
+	echo "<table>";
 	for ($i = 0; $i < count($newArray); $i++) {
 		if ($key == $newArray[$i][2])
 			echo "<tr><td>" . $newArray[$i][0] . "</td><td><form method='post' action='deleteExercise.php'>
@@ -132,7 +132,7 @@ foreach ($routReal as $key => $value) {
 	 </form></td>" . "</tr>";
 	}
 	//echo "</ul>";
-	echo "</table>";
+	echo "</table></div>";
 	
 	echo "<form method='post' action='deleteRoutine.php'>";
 	echo "<input type='text' value='" . $key . "' name='deleteRoutid' style='display:none'>";
