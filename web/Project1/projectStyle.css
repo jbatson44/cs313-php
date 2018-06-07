@@ -31,5 +31,5 @@ body {
 
 .bottom {
 	background-color: black;
-	height: 100%;
+	padding-bottom: 300px;
 }
