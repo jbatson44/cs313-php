@@ -132,7 +132,7 @@ foreach ($routReal as $key => $value) {
 	 </form></td>" . "</tr>";
 	}
 	//echo "</ul>";
-	echo "</table></div>";
+	echo "</table></div><br>";
 	
 	echo "<form method='post' action='deleteRoutine.php'>";
 	echo "<input type='text' value='" . $key . "' name='deleteRoutid' style='display:none'>";

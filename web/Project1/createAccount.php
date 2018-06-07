@@ -16,6 +16,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="projectStyle.css">
 		<title>Fit - Create Account</title>
 	</head>
 	<body>
