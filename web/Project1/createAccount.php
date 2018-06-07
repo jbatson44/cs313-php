@@ -20,7 +20,9 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		<title>Fit - Create Account</title>
 	</head>
 	<body>
-		<h1>Create An Account</h1>
+		<div class="header">
+			<h1>Create An Account</h1>
+		</div>
 		<div id="login">
 			<form action="testAccount.php" method="post">
 				Username: 
