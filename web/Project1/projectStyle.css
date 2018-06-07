@@ -20,7 +20,7 @@
 body {
 	margin-left: 200px;
 	margin-right: 200px;
-	background-color: dimgray;
+	background-color: black;
 	padding-left: 50px;
 	padding-right: 50px;
 }
@@ -31,6 +31,7 @@ body {
 .middle {
 	padding-top: 100px;
 	padding-bottom: 100px;
+	background-color: dimgray;
 }
 .bottom {
 	background-color: black;
