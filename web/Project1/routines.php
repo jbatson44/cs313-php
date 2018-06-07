@@ -26,6 +26,7 @@ echo "<title>User " . $_SESSION['user'] . "</title>";
 ?>
 	</head>
 	<body>
+	<div class="header">
 <?php
 $statement = $db->prepare("SELECT * FROM users WHERE username = '{$_SESSION['user']}'");
 $statement->execute();
@@ -68,7 +69,8 @@ $routReal = array_combine($routineid, $routine);
 	echo "Current weight: " . $_SESSION['weight'] . " lbs<br>";
 	//echo "Userid: " . $_SESSION['userid'];
 ?>
-		<h2>Routines</h2>
+			<h2>Routines</h2>
+		</div>
 <?php
 //$in = join(',', array_fill(0, count($routineid), '?'));
 //$select = <<<SQL
