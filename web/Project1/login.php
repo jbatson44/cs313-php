@@ -23,18 +23,20 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		<div class="header">
 			<h1 class="title">Welcome to FIT</h1>
 		</div>
-		<div id="login">
-			<form action="testLogin.php" method="post">
-				Username: 
-				<input type="text" name="username"><br><br>
-				Password: 
-				<input type="password" name="password"><br><br>
-				<input type="submit" value="login"><br>
-				<a href="createAccount.php">Create an account</a>
-			</form>
+		<div class="middle">
+			<div id="login">
+				<form action="testLogin.php" method="post">
+					Username: 
+					<input type="text" name="username"><br><br>
+					Password: 
+					<input type="password" name="password"><br><br>
+					<input type="submit" value="login"><br>
+					<a href="createAccount.php">Create an account</a>
+				</form>
+			</div>
 		</div>
 		<div class="bottom">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
 		</div>
 	</body>
 </html>
