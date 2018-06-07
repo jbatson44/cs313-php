@@ -1,6 +1,6 @@
 <?
 session_start();
-unset($_SESSION['user']);
+
 if(isset($_SESSION['user'])) {
 	echo "Welcome " . $_SESSION['user'];
 } else {
