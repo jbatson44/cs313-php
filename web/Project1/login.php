@@ -21,7 +21,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	</head>
 	<body>
 		<div class="header">
-			<h1>Welcome to FIT</h1>
+			<h1 class="title">Welcome to FIT</h1>
 		</div>
 		<div id="login">
 			<form action="testLogin.php" method="post">

@@ -64,7 +64,7 @@ $routReal = array_combine($routineid, $routine);
 
 
 	//echo $_SESSION['user'];
-	echo "<h1>" . $_SESSION['user'] . "</h1>";	
+	echo "<h1 class='title'>User: " . $_SESSION['user'] . "</h1>";	
 	echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
 	echo "Current weight: " . $_SESSION['weight'] . " lbs<br>";
 	//echo "Userid: " . $_SESSION['userid'];
