@@ -64,13 +64,13 @@ $routReal = array_combine($routineid, $routine);
 
 
 	//echo $_SESSION['user'];
-	echo "<h1 class='title'>User: " . $_SESSION['user'] . "</h1>";	
+	echo "<h1 class='title'>User: " . $_SESSION['user'] . "</h1></div>";	
 	echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
 	echo "Current weight: " . $_SESSION['weight'] . " lbs<br>";
 	//echo "Userid: " . $_SESSION['userid'];
 ?>
 			<h2>Routines</h2>
-		</div>
+		
 <?php
 //$in = join(',', array_fill(0, count($routineid), '?'));
 //$select = <<<SQL
