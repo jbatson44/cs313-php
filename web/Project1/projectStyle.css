@@ -30,10 +30,10 @@ body {
 }
 .middle {
 	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-bottom: 300px;
 	background-color: dimgray;
 }
 .bottom {
 	background-color: black;
-	padding-bottom: 300px;
+	padding-bottom: 200px;
 }
