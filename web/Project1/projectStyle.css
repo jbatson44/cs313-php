@@ -28,7 +28,10 @@ body {
 .title {
 	text-align: center;
 }
-
+.middle {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
 .bottom {
 	background-color: black;
 	padding-bottom: 300px;
