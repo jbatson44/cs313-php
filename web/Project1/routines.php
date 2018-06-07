@@ -19,8 +19,8 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 <!DOCTYPE html>
 <html>
 	<head>
-	<link rel="stylesheet" href="projectStyle.css">
-	<script src="fitscript.js"></script>
+		<link rel="stylesheet" href="projectStyle.css">
+		<script src="fitscript.js"></script>
 <?php
 echo "<title>User " . $_SESSION['user'] . "</title>";
 ?>
