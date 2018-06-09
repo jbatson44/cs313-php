@@ -32,7 +32,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 					Password: 
 					<input type="password" name="password"><br><br>
 					<input type="submit" value="login"><br>
-					<a href="createAccount.php">Create an account</a>
+					<a href="createAccount.php" style="float:right">Create an account</a>
 				</form>
 			</div>
 		</div>
