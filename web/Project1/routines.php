@@ -52,9 +52,10 @@ $routReal = array_combine($routineid, $routine);
 
 
 	//echo $_SESSION['user'];
-	echo "<h1 class='title'>User: " . $_SESSION['user'] . "</h1></div>";	
-	echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
-	echo "Current weight: " . $_SESSION['weight'] . " lbs<br>";
+echo "<h1 class='title'>User: " . $_SESSION['user'] . "</h1></div>";
+echo "<div class='middle'>";	
+echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
+echo "Current weight: " . $_SESSION['weight'] . " lbs<br>";
 	//echo "Userid: " . $_SESSION['userid'];
 ?>
 			<h2>Routines</h2>
@@ -81,7 +82,7 @@ $newArray = array();
 for ($i = 0; $i < count($exercises); $i++) {
 	$newArray[$i] = array($exercises[$i], $exid[$i], $exRoutid[$i]);
 }
-echo "<div class='middle'>";
+
 foreach ($routReal as $key => $value) {
 	echo "<div class='routine'><h3>" . $value . "</h3>";
 	//echo "<ul>";
@@ -104,13 +105,16 @@ foreach ($routReal as $key => $value) {
 
 session_write_close();
 ?>
-<form method="post" action="addRoutine.php">
-	<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
-	<input type="submit" class="edits" value="Add Routine" name="submitRoutine" style="visibility:hidden">
-</form>
-</div>
+			<form method="post" action="addRoutine.php">
+				<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
+				<input type="submit" class="edits" value="Add Routine" name="submitRoutine" style="visibility:hidden">
+			</form>
+		</div>
 <?php
 
 ?>
+		<div class="bottom">
+		
+		</div>
 	</body>
 </html>
