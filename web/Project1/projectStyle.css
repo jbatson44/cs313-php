@@ -11,7 +11,7 @@
 }
 
 .header {
-	background-color: gray;
+	background-color: Snow;
 	padding-top: 50px;
 	padding-left: 50px;
 	padding-right: 50px;
@@ -31,9 +31,9 @@ body {
 .middle {
 	padding-top: 100px;
 	padding-bottom: 200px;
-	background-color: dimgray;
+	background-color: Snow;
 }
 .bottom {
-	background-color: black;
+	background-color: Snow;
 	padding-bottom: 100px;
 }
