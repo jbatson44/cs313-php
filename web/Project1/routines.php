@@ -65,7 +65,7 @@ echo "Current weight: " . $_SESSION['weight'] . " lbs<br></div>";
 echo "<div class='routines'>";
 ?>
 			<h2>Routines</h2>
-		
+			<a href="login.php" style="float:right">Logout</a>
 <?php
 
 $statement = $db->prepare("SELECT * FROM exercises");
