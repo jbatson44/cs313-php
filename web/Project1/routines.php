@@ -75,7 +75,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 $exReal = array_combine($exercises, $exRoutid);
 ?>
-<input type="button" name="edit" value="+" onclick="add()"/>
+<input type="button" name="edit" value="+" onclick="addRoutines()"/>
 <input type="button" name="edit" value="-" onclick="deleteRoutines()"/>
 <?php
 $newArray = array();

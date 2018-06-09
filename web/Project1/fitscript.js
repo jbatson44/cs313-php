@@ -1,4 +1,4 @@
-function add() {
+function addRoutines() {
 	if (document.getElementsByName("newRoutine")[0].style.visibility == 'hidden') {
 		console.log("show add!");
 		document.getElementsByName("newRoutine")[0].style.visibility = 'visible';
