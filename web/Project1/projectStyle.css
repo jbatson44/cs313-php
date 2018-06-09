@@ -23,8 +23,9 @@
 }
 #login {
 	position: absolute;
-	left: 700px;
+	left: 600px;
 	padding: 10px;
+	border: solid black 2px;
 }
 .header {
 	background-color: Snow;
