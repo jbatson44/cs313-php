@@ -127,7 +127,6 @@ session_write_close();
 <?php
 echo "</div>";
 ?>
-		<div class="bottom">
-		</div>
+		
 	</body>
 </html>
