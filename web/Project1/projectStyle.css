@@ -65,5 +65,7 @@ body {
 .bottom {
 	width:100%;
 	background-color: black;
+	position:fixed;
+	bottom:0;
 	padding-bottom: 100px;
 }
