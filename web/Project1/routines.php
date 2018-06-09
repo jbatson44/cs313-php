@@ -122,8 +122,6 @@ session_write_close();
 <?php
 
 ?>
-		<div class="bottom">
-		
-		</div>
-	</body>
+		<div class="bottom"></div
+	></body>
 </html>
