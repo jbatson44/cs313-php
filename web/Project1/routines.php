@@ -57,6 +57,7 @@ echo "<div class='middle'><div class='info'>";
 echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
 echo "Current weight: " . $_SESSION['weight'] . " lbs<br></div>";
 	//echo "Userid: " . $_SESSION['userid'];
+echo "<div class='routines'>";
 ?>
 			<h2>Routines</h2>
 		
@@ -82,7 +83,7 @@ $newArray = array();
 for ($i = 0; $i < count($exercises); $i++) {
 	$newArray[$i] = array($exercises[$i], $exid[$i], $exRoutid[$i]);
 }
-echo "<div class='routines'>";
+
 foreach ($routReal as $key => $value) {
 	echo "<div class='routine'><h3>" . $value . "</h3>";
 	//echo "<ul>";
