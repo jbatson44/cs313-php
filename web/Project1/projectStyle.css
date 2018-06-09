@@ -63,6 +63,7 @@ body {
 	background-color: Snow;
 }
 .bottom {
+	margin:auto;
 	width:80%;
 	background-color: black;
 	position:absolute;
