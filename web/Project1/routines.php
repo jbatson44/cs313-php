@@ -107,7 +107,7 @@ foreach ($routReal as $key => $value) {
 	echo "<form method='post' action='deleteRoutine.php'>";
 	echo "<input type='text' value='" . $key . "' name='deleteRoutid' style='display:none'>";
 	echo "<input type='submit' class='deletions' value='Delete Routine' name='deleteRoutine' onclick='deleteRoutines()'>";
-	echo "</form>";
+	echo "</form><br>";
 
 	echo "<form method='post' action='addExercise.php'>";
 	echo "<input type='text' value='" . $key . "' name='addExRoutid' style='display:none'>";
