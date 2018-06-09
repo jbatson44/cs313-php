@@ -1,16 +1,18 @@
 .routine {
 	border: solid black 3px;
+	font-size: 24px;
 }
 .routines {
 	float: right;
 	position: absolute;
     left: 700px;
+	font-size: 18px;
 }
 .info {
 	float: left;
 	border: solid black 3px;
 	padding: 20px;
-	font-size: 20px;
+	font-size: 18px;
 }
 .deletions {
 	display: none;
