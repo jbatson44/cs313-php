@@ -1,5 +1,4 @@
 .routine {
-	border: solid black 3px;
 	font-size: 18px;
 }
 .routines {
@@ -33,6 +32,7 @@
 	padding-left: 50px;
 	padding-right: 50px;
 	font-size: 28px;
+	text-align: center;
 }
 
 body {
