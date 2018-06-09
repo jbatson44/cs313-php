@@ -3,14 +3,26 @@ function add() {
 		console.log("show add!");
 		document.getElementsByName("newRoutine")[0].style.visibility = 'visible';
 		document.getElementsByName("submitRoutine")[0].style.visibility = 'visible';
-		document.getElementsByName("addExName")[0].style.visibility = 'visible';
-		document.getElementsByName("addExercise")[0].style.visibility = 'visible';
+		//document.getElementsByName("addExName")[0].style.visibility = 'visible';
+		//document.getElementsByName("addExercise")[0].style.visibility = 'visible';
+		var exNames = document.getElementsByName("addExName");
+		var addEx = document.getElementsByName("addExercise");
+		for (var i = 0; i < exNames.length; i++) {
+			exNames[i].style.visibility = 'visible';
+			addEx[i].style.visibility = 'visible';
+		}
 	} else {
 		console.log("hide add!");
 		document.getElementsByName("newRoutine")[0].style.visibility = 'hidden';
 		document.getElementsByName("submitRoutine")[0].style.visibility = 'hidden';
-		document.getElementsByName("addExName")[0].style.visibility = 'hidden';
-		document.getElementsByName("addExercise")[0].style.visibility = 'hidden';
+		//document.getElementsByName("addExName")[0].style.visibility = 'hidden';
+		//document.getElementsByName("addExercise")[0].style.visibility = 'hidden';
+		var exNames = document.getElementsByName("addExName");
+		var addEx = document.getElementsByName("addExercise");
+		for (var i = 0; i < exNames.length; i++) {
+			exNames[i].style.visibility = 'hidden';
+			addEx[i].style.visibility = 'hidden';
+		}
 	}
 }
 
