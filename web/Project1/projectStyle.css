@@ -9,6 +9,7 @@
 .info {
 	float: left;
 	border: solid black 3px;
+	padding: 50px;
 }
 .deletions {
 	display: none;
