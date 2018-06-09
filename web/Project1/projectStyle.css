@@ -1,12 +1,12 @@
 .routine {
 	border: solid black 3px;
-	font-size: 24px;
+	font-size: 18px;
 }
 .routines {
 	float: right;
 	position: absolute;
     left: 700px;
-	font-size: 18px;
+	font-size: 24px;
 }
 .info {
 	float: left;
