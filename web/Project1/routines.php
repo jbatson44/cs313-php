@@ -106,7 +106,7 @@ foreach ($routReal as $key => $value) {
 	echo "<input type='text' value='" . $key . "' name='addExRoutid' style='display:none'>";
 	echo "<input type='text' name='addExName[]'>";
 	echo "<input type='submit' class='additions' value='Add Exercise' name='addExercise[]'>"; //style='visibility:hidden'
-	echo "</form>";
+	echo "</form><br>";
 }
 
 session_write_close();
