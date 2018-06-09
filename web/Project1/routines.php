@@ -34,6 +34,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$_SESSION['heightfeet'] = $row['heightfeet'];
 	$_SESSION['heightinch'] = $row['heightinch'];
 	$_SESSION['weight'] = $row['weight'];
+	$_SESSION['sex'] = $row['sex'];
+	$_SESSION['age'] = $row['age'];
 }
 
 $statement = $db->prepare("SELECT * FROM routines WHERE userid = '{$_SESSION['userid']}'");
@@ -55,6 +57,8 @@ $routReal = array_combine($routineid, $routine);
 echo "<h1 class='title'>User: " . $_SESSION['user'] . "</h1></div>";
 echo "<div class='middle'><div class='info'>";	
 echo "<b>User Information</b><br>";
+echo "Age: " . $_SESSION['age'] . "<br>";
+echo "Sex: " . $_SESSION['sex'] . "<br>";
 echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
 echo "Current weight: " . $_SESSION['weight'] . " lbs<br></div>";
 	//echo "Userid: " . $_SESSION['userid'];

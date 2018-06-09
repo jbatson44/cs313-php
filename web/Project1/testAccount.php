@@ -27,6 +27,8 @@ $pass = $_POST['password'];
 $heightfeet = $_POST['heightfeet'];
 $heightinch = $_POST['heightinch'];
 $weight = $_POST['weight'];
+$sex = $_POST['sex'];
+$age = $_POST['age'];
 $statement = $db->prepare("SELECT * FROM users");
 $statement->execute();
 $userExists = false;
@@ -44,7 +46,7 @@ if ($userExists == true) {
 else {
 	try
 	{
-		$query = 'INSERT INTO users(username, password, heightfeet, heightinch, weight) VALUES(:username, :password, :heightfeet, :heightinch, :weight)';
+		$query = 'INSERT INTO users(username, password, heightfeet, heightinch, weight, age, sex) VALUES(:username, :password, :heightfeet, :heightinch, :weight, :age, :sex)';
 		$statement = $db->prepare($query);
 	
 		$statement->bindValue(':username', $user);
@@ -52,6 +54,8 @@ else {
 		$statement->bindValue(':heightfeet', $heightfeet);
 		$statement->bindValue(':heightinch', $heightinch);
 		$statement->bindValue(':weight', $weight);
+		$statement->bindValue(':age', $age);
+		$statement->bindValue(':sex', $sex);
 		$statement->execute();
 		header("location: https://glacial-meadow-56606.herokuapp.com/Project1/routines.php");  
 		exit(); 

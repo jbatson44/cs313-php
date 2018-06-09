@@ -26,10 +26,11 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		<div id="login">
 			<form action="testAccount.php" method="post">
 				<p style="text-align:center;font-size:20px;"><b>New User Information</b></p>
-				Username: 
-				<input type="text" name="username"><br><br>
-				Password: 
-				<input type="text" name="password"><br><br>
+				Age:
+				<input type="number" min="0" max="100" name="age"/><br><br>
+				Sex:
+				<input type="radio" name="sex" value="Male" checked> Male<br>
+				<input type="radio" name="sex" value="Female"> Female<br>
 				Height Feet:
 				<select name="heightfeet">
 					<option value="3">3</option>
@@ -56,6 +57,10 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				</select><br><br>
 				Weight:
 				<input type="number" step="any" min="0" name="weight"/><br><br>
+				Username: 
+				<input type="text" name="username"><br><br>
+				Password: 
+				<input type="text" name="password"><br><br>
 				<input type="submit" value="Create account"><br>
 				<a href="login.php">Existing user</a>
 			</form>
