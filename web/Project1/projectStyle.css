@@ -22,8 +22,8 @@
 	
 }
 #login {
-	position: absolute;
-	left: 600px;
+	margin: auto;
+	width: 30%;
 	padding: 10px;
 	border: solid black 2px;
 }
