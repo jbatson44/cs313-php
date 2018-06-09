@@ -4,8 +4,7 @@
 }
 .routines {
 	float: right;
-	position: absolute;
-    left: 700px;
+	margin: auto;
 	font-size: 24px;
 }
 .info {
