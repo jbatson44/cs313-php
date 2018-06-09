@@ -37,7 +37,6 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			</div>
 		</div>
 		<div class="bottom">
-		works
 		</div>
 	</body>
 </html>
