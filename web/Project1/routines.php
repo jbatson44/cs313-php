@@ -62,7 +62,7 @@ echo "Sex: " . $_SESSION['sex'] . "<br>";
 echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
 echo "Current weight: " . $_SESSION['weight'] . " lbs<br></div>";
 	//echo "Userid: " . $_SESSION['userid'];
-echo "<a href="login.php" style="float:right">Logout</a>";
+echo "<a href='login.php' style='float:right'>Logout</a>";
 echo "<div class='routines'>";
 ?>
 			<h2>Routines</h2>
