@@ -75,7 +75,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 $exReal = array_combine($exercises, $exRoutid);
 ?>
-<input type="button" name="edit" value="+" onclick="addRoutines()"/>
+<input type="button" name="edit" value="+" onclick="add()"/>
 <input type="button" name="edit" value="-" onclick="deleteRoutines()"/>
 <?php
 $newArray = array();
@@ -99,7 +99,13 @@ foreach ($routReal as $key => $value) {
 	
 	echo "<form method='post' action='deleteRoutine.php'>";
 	echo "<input type='text' value='" . $key . "' name='deleteRoutid' style='display:none'>";
-	echo "<input type='submit' class='deletions' value='Delete Routine' name='deleteRoutine' onclick='deleteRoutines()'>";// style='visibility:hidden'>"
+	echo "<input type='submit' class='deletions' value='Delete Routine' name='deleteRoutine' onclick='deleteRoutines()'>";
+	echo "</form>";
+
+	echo "<form method='post' action='addExercise.php'>";
+	echo "<input type='text' value='" . $key . "' name='addExRoutid' style='display:none'>";
+	echo "<input type='text' name='addExName' style='visibility:hidden'>";
+	echo "<input type='submit' class='additions' value='Add Exercise' name='addExercise' style='visibility:hidden'>";
 	echo "</form>";
 }
 
