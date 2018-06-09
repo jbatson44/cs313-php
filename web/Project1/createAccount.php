@@ -29,7 +29,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				Age:
 				<input type="number" min="0" max="100" name="age"/><br><br>
 				Sex:
-				<input type="radio" name="sex" value="Male" checked> Male<br>
+				<input type="radio" name="sex" value="Male" checked> Male
 				<input type="radio" name="sex" value="Female"> Female<br>
 				Height Feet:
 				<select name="heightfeet">

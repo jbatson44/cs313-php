@@ -115,7 +115,7 @@ foreach ($routReal as $key => $value) {
 	echo "<input type='submit' class='additions' value='Add Exercise' name='addExercise[]'>"; //style='visibility:hidden'
 	echo "</form><br></div>";
 }
-echo "</div>";
+
 session_write_close();
 ?>
 			<form method="post" action="addRoutine.php">
@@ -124,7 +124,7 @@ session_write_close();
 			</form>
 		</div>
 <?php
-
+echo "</div>";
 ?>
 		<div class="bottom"></div
 	></body>
