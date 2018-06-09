@@ -1,7 +1,13 @@
 .routine {
 	border: solid black 3px;
 }
-
+.routines {
+	float: right;
+}
+.info {
+	float: left;
+	border: solid black 3px;
+}
 .deletions {
 	display: none;
 }
