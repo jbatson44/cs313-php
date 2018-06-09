@@ -6,10 +6,11 @@
 	width:30%;
 	font-size: 24px;
 	padding-left: 40px;
+	border: solid black 3px;
 }
 .info {
 	float: left;
-	border: solid black 3px;
+	border: solid black 2px;
 	padding: 20px;
 	font-size: 18px;
 }
