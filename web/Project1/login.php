@@ -35,6 +35,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 					<a href="createAccount.php" style="float:right">Create an account</a>
 				</form>
 			</div>
+			<br><br><br><br>
 		</div>
 		
 	</body>
