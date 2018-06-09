@@ -32,7 +32,7 @@ $passRight = false;
 while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
     if ($row['username'] == $_SESSION['user']) {
 		$userRight = true;
-		if ($userRight || row['password'] == $pass) {
+		if (password_verify($pass, $row['password']) {
 			$passRight = true;
 			header("location: https://glacial-meadow-56606.herokuapp.com/Project1/routines.php");  
 			//die();

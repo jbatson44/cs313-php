@@ -46,11 +46,12 @@ if ($userExists == true) {
 else {
 	try
 	{
+		$passwordHash = password_hash($pass, PASSWORD_DEFAULT);
 		$query = 'INSERT INTO users(username, password, heightfeet, heightinch, weight, age, sex) VALUES(:username, :password, :heightfeet, :heightinch, :weight, :age, :sex)';
 		$statement = $db->prepare($query);
 	
 		$statement->bindValue(':username', $user);
-		$statement->bindValue(':password', $pass);
+		$statement->bindValue(':password', $passwordHash);
 		$statement->bindValue(':heightfeet', $heightfeet);
 		$statement->bindValue(':heightinch', $heightinch);
 		$statement->bindValue(':weight', $weight);
