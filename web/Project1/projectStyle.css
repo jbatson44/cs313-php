@@ -3,6 +3,8 @@
 }
 .routines {
 	float: right;
+	position: relative;
+    left: 500px;
 }
 .info {
 	float: left;
