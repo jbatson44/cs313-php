@@ -20,7 +20,7 @@ try {
 	$query = 'INSERT INTO exercises(exercise, routineid) VALUES(:exercise, :routineid)';
 	$statement = $db->prepare($query);
 	
-	$statement->bindValue(':exercise', $newExercise);
+	$statement->bindValue(':exercise', $newExercise[$routineId]);
 	$statement->bindValue(':routineid', $routineId);
 	$statement->execute();
 	header("location: https://glacial-meadow-56606.herokuapp.com/Project1/routines.php");  

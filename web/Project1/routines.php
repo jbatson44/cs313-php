@@ -104,7 +104,7 @@ foreach ($routReal as $key => $value) {
 
 	echo "<form method='post' action='addExercise.php'>";
 	echo "<input type='text' value='" . $key . "' name='addExRoutid' style='display:none'>";
-	echo "<input type='text' name='addExName[]'>";
+	echo "<input type='text' name='addExName[". $key ."]'>";
 	echo "<input type='submit' class='additions' value='Add Exercise' name='addExercise[]'>"; //style='visibility:hidden'
 	echo "</form><br>";
 }
