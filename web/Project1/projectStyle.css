@@ -56,6 +56,12 @@ body {
 	text-align: center;
 	
 }
+
+tr {
+	border-bottom: solid red 2px;
+	border-top: solid red 2px;
+}
+
 .middle {
 	width:96%;
 	padding-top: 20px;
