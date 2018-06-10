@@ -82,8 +82,12 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 $exReal = array_combine($exercises, $exRoutid);
 ?>
-<input type="button" name="edit" value="+" onclick="addRoutines()"/>
-<input type="button" name="edit" value="-" onclick="deleteRoutines()"/>
+			<input type="button" name="edit" value="+" onclick="addRoutines()"/>
+			<input type="button" name="edit" value="-" onclick="deleteRoutines()"/>
+			<form method="post" action="addRoutine.php">
+				<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
+				<input type="submit" class="edits" value="Add Routine" name="submitRoutine" style="visibility:hidden">
+			</form>
 <?php
 $newArray = array();
 for ($i = 0; $i < count($exercises); $i++) {
@@ -124,11 +128,7 @@ foreach ($routReal as $key => $value) {
 }
 
 session_write_close();
-?>
-			<form method="post" action="addRoutine.php">
-				<input type="text" class="edits" name="newRoutine" style="visibility:hidden">
-				<input type="submit" class="edits" value="Add Routine" name="submitRoutine" style="visibility:hidden">
-			</form>
+?>		
 		</div>
 <?php
 echo "</div>";
