@@ -69,7 +69,7 @@ echo "<div class='routines'>";
 			
 <?php
 
-$statement = $db->prepare("SELECT * FROM exercises");
+$statement = $db->prepare("SELECT * FROM exercises FULL OUTER JOIN routines");
 $statement->execute();
 $exercises = array();
 $exRoutid = array();
