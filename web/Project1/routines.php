@@ -98,7 +98,7 @@ foreach ($routReal as $key => $value) {
 		if ($key == $newArray[$i][2])
 			echo "<tr><td>" . $newArray[$i][0] . "</td><td><form method='post' action='deleteExercise.php'>
 	 <input type='text' value='" . $newArray[$i][1] . "' name='deleteExid[". $newArray[$i][1] ."]' style='display:none'>
-	 <input type='submit' class='deletions' value='Delete Exercise' name='deleteExercise' onclick='deleteRoutines()'>
+	 <input type='submit' class='deletions' value='Delete Exercise' name='deleteExercise'>
 	 </form></td>" . "</tr>";
 	}
 	//echo "</ul>";
