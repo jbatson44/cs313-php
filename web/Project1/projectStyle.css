@@ -56,10 +56,11 @@ body {
 	text-align: center;
 	
 }
-
+table {
+	border-collapse: collapse;
+}
 tr {
-	border-bottom: solid red 2px;
-	border-top: solid red 2px;
+	border: solid red 2px;
 }
 
 .middle {
