@@ -33,7 +33,7 @@
 .header {
 	width:96%;
 	display: inline-block;
-	background-color: red;
+	background-color: darkgray;
 	padding-left: 20px;
 	padding-right: 20px;
 	font-size: 24px;
@@ -62,7 +62,7 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
-	background-color: Snow;
+	background-color: darkgray;
 	border-left: solid black 2px;
 	border-right: solid black 2px;
 	border-bottom: solid black 5px;
