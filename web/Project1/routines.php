@@ -60,7 +60,7 @@ echo "<b>User Information</b><br><br>";
 echo "Age: " . $_SESSION['age'] . "<br>";
 echo "Sex: " . $_SESSION['sex'] . "<br>";
 echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
-echo "Current weight: " . $_SESSION['weight'] . " lbs<br></div>";
+echo "Weight: " . $_SESSION['weight'] . " lbs<br></div>";
 	//echo "Userid: " . $_SESSION['userid'];
 echo "<a href='login.php' style='float:right'>Logout</a>";
 echo "<div class='routines'>";
@@ -100,7 +100,10 @@ foreach ($routReal as $key => $value) {
 	 <input type='text' value='" . $newArray[$i][1] . "' name='deleteExid[". $i ."]' style='display:none'>
 	 <input type='text' value='" . $i . "' name='delEx' style='display:none'>
 	 <input type='submit' class='deletions' value='Delete Exercise' name='deleteExercise'>
-	 </form></td>" . "</tr>";
+	 </form></td>";
+	 echo "<td><form method='post' action='addstats.php'>Sets: <input type='number' name='set'> Reps: <input type='number' name='rep'>";
+	 echo "<input type='text' value='" . $i . "' name='exStats' style='display:none'>";
+	 echo "<input type='submit' value='Add Stats'></form></td></tr>"; 
 	}
 	//echo "</ul>";
 	echo "</table>";
