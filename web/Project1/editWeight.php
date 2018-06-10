@@ -17,7 +17,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $weight = $_POST['weight'];
 $id = $_SESSION['userid'];
 try {
-	$query = "UPDATE users SET weight=':weight' WHERE id = :id";
+	$query = "UPDATE users SET weight=:weight WHERE id = :id";
 	$statement = $db->prepare($query);
 	
 	$statement->bindValue(':weight', $weight);
