@@ -101,10 +101,11 @@ foreach ($routReal as $key => $value) {
 	 <input type='text' value='" . $i . "' name='delEx' style='display:none'>
 	 <input type='submit' class='deletions' value='Delete Exercise' name='deleteExercise'>
 	 </form></td>";
+	 /* Input statements for exercise stats
 	 echo "<td><form method='post' action='addstats.php'>Weight: <input type='number' name='weight' min='1' max='2000'><br>
 	 Sets: <input type='number' name='set' min='1' max='99'><br> Reps: <input type='number' name='rep' min='1' max='99'><br>";
 	 echo "<input type='text' value='" . $i . "' name='exId' style='display:none'>";
-	 echo "<input type='submit' value='Add Stats'></form></td></tr>"; 
+	 echo "<input type='submit' value='Add Stats'></form></td></tr>"; */
 		}
 	}
 	//echo "</ul>";
