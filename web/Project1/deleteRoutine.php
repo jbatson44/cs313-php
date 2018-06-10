@@ -17,7 +17,13 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $delRoutine = $_POST['deleteRoutid'];
 
 try {
-$query = "DELETE FROM routines WHERE routineid = :id";
+	$query = "DELETE FROM exercises WHERE routineid = :id";
+	$statement = $db->prepare($query);
+	$statement->bindValue(':id', $delRoutine);
+	$statement->execute();
+	
+	
+	$query = "DELETE FROM routines WHERE routineid = :id";
 	$statement = $db->prepare($query);
 	
 	$statement->bindValue(':id', $delRoutine);
