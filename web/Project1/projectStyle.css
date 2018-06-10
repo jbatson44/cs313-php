@@ -65,12 +65,12 @@ body {
 	background-color: Snow;
 	border-left: solid black 2px;
 	border-right: solid black 2px;
+	border-bottom: solid black 5px;
 }
 .bottom {
 	margin:auto;
 	width:67%;
 	background-color: black;
-	border-bottom: solid black 5px;
 	position:absolute;
 	bottom:0;
 	height: 200px;
