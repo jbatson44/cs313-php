@@ -56,11 +56,9 @@ body {
 	text-align: center;
 	
 }
-table, tr {
-	border: solid red 2px;
-}
-table, tr:last-child {
-	border-bottom: none;
+tr {
+	border-bottom: solid red 2px;
+
 }
 
 .middle {
