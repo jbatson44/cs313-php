@@ -38,7 +38,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$_SESSION['age'] = $row['age'];
 }
 
-$statement = $db->prepare("SELECT * FROM routines WHERE userid = '{$_SESSION['userid']}'");
+$statement = $db->prepare("SELECT * FROM routines FULL OUTER JOIN users WHERE users.id = '{$_SESSION['userid']}'");
 $statement->execute();
 $routine = array();
 $routineid = array();
@@ -69,7 +69,7 @@ echo "<div class='routines'>";
 			
 <?php
 
-$statement = $db->prepare("SELECT * FROM exercises FULL OUTER JOIN routines");
+$statement = $db->prepare("SELECT * FROM exercises");
 $statement->execute();
 $exercises = array();
 $exRoutid = array();
