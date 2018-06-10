@@ -60,8 +60,10 @@ echo "<b>User Information</b><br><br>";
 echo "Age: " . $_SESSION['age'] . "<br>";
 echo "Sex: " . $_SESSION['sex'] . "<br>";
 echo "Height: " . $_SESSION['heightfeet'] . "'" . $_SESSION['heightinch'] . "\"<br>";
-echo "Weight: " . $_SESSION['weight'] . " lbs<br></div>";
+echo "Weight: " . $_SESSION['weight'] . " lbs<br>";
 	//echo "Userid: " . $_SESSION['userid'];
+echo "<form method='post' action='editWeight.php'><input type='number' step='any' min='0' name='weight'/>
+	<input type='submit' value='Edit Weight'></form></div>";
 echo "<a href='login.php' style='float:right'>Logout</a>";
 echo "<div class='routines'>";
 ?>
