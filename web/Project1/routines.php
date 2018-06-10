@@ -95,7 +95,7 @@ foreach ($routReal as $key => $value) {
 	//echo "<ul>";
 	echo "<table>";
 	for ($i = 0; $i < count($newArray); $i++) {
-		if ($key == $newArray[$i][2])
+		if ($key == $newArray[$i][2]) {
 			echo "<tr><td>" . $newArray[$i][0] . "</td><td><form method='post' action='deleteExercise.php'>
 	 <input type='text' value='" . $newArray[$i][1] . "' name='deleteExid[". $i ."]' style='display:none'>
 	 <input type='text' value='" . $i . "' name='delEx' style='display:none'>
@@ -104,6 +104,7 @@ foreach ($routReal as $key => $value) {
 	 echo "<td><form method='post' action='addstats.php'>Sets: <input type='number' name='set'> Reps: <input type='number' name='rep'>";
 	 echo "<input type='text' value='" . $i . "' name='exStats' style='display:none'>";
 	 echo "<input type='submit' value='Add Stats'></form></td></tr>"; 
+		}
 	}
 	//echo "</ul>";
 	echo "</table>";
