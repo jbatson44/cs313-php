@@ -56,11 +56,11 @@ body {
 	text-align: center;
 	
 }
-table {
-	border-collapse: collapse;
-}
-tr {
+table, tr {
 	border: solid red 2px;
+}
+table, tr:last-child {
+	border-bottom: none;
 }
 
 .middle {
